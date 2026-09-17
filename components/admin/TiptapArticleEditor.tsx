@@ -180,15 +180,22 @@ export default function TiptapArticleEditor({
         class:
           "tiptap rich-content max-w-none px-3 py-2.5 text-sm text-stone-900 outline-none [&_img]:cursor-pointer [&_figure]:cursor-pointer",
       },
-      handleClickOn: (_view: any, pos: number, node: any) => {
+      // ProseMirror passes two positions here: `pos` (nearest position to
+      // the click) and `nodePos` (the node's actual start position). For
+      // atomic nodes like image/figure these can differ — using `pos`
+      // instead of `nodePos` meant tr.doc.nodeAt(pos) below (in
+      // replaceNodeAt/handleImageDelete) would often resolve to null,
+      // silently no-oping "Save changes" and "Remove from Article" alike
+      // instead of throwing, so it looked like the buttons just didn't work.
+      handleClickOn: (_view: any, _pos: number, node: any, nodePos: number) => {
         if (node.type.name === "image") {
-          editingImageRef.current = { pos };
+          editingImageRef.current = { pos: nodePos };
           setEditingImageData({ url: node.attrs.src || "", alt: node.attrs.alt || "", caption: "" });
           setImageModalOpen(true);
           return true;
         }
         if (node.type.name === "figure") {
-          editingImageRef.current = { pos };
+          editingImageRef.current = { pos: nodePos };
           setEditingImageData({
             url: node.attrs.src || "",
             alt: node.attrs.alt || "",
