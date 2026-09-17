@@ -14,8 +14,7 @@ export default function HeaderNav({ links }: { links?: NavLink[] }) {
     { label: "Contact", href: "/contact" },
   ];
 
-  // User requirement: Keep ONLY Home, About Us, Blog, and Contact in header
-  const navLinks = defaultLinks;
+  const navLinks = links || defaultLinks;
 
   return (
     <nav className="hidden items-center gap-8 md:flex">

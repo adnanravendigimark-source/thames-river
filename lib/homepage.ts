@@ -502,18 +502,18 @@ export const DEFAULT_SECTIONS: HomepageSections = {
 };
 
 const DEFAULT_HOMEPAGE_CONTENT: HomepageContent = {
-  heroBadge: "THAMES RIVER CRUISE TICKETS",
-  heroHeading: "Discover London's Iconic River",
+  heroBadge: "DISCOVER LONDON FROM THE WATER",
+  heroHeading: "See London From a Different Perspective",
   heroSubheading:
-    "<p>Book your Thames River cruise tickets in advance and see Big Ben, the London Eye, and Tower Bridge from the water. Breathtaking skyline views, live commentary, and unforgettable experiences await you.</p>",
+    "<p>Relax, explore and experience the best of London with our scenic river cruises. From iconic landmarks to unforgettable moments, it's a journey worth taking.</p>",
   heroImage: "/images/thames-hero.jpg",
-  heroImageAlt: "A Thames river cruise boat passing Tower Bridge under a clear blue sky, London",
+  heroImageAlt: "Thames river cruise boat passing Tower Bridge at sunset, London",
   heroVideo: "",
   heroGallery: DEFAULT_GALLERY,
   heroFeatures: DEFAULT_HERO_FEATURES,
-  heroCtaPrimaryText: "Book Tickets Now",
+  heroCtaPrimaryText: "Explore Cruises",
   heroCtaPrimaryHref: "#tours",
-  heroCtaSecondaryText: "Explore Cruises",
+  heroCtaSecondaryText: "Watch Our Story",
   heroCtaSecondaryHref: "#tours",
   showFeaturedTour: true,
   featuredTourId: "thames-1-hour-sightseeing-cruise",

@@ -210,7 +210,7 @@ export default function TourForm({
           />
         </div>
         <div>
-          <label className={labelClass}>Price (€)</label>
+          <label className={labelClass}>Price (£)</label>
           <input
             type="number"
             min="0"

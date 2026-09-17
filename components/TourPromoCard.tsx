@@ -28,7 +28,7 @@ export default function TourPromoCard({
               <span>·</span>
             </>
           )}
-          <span>from €{tour.price}/person</span>
+          <span>from £{tour.price}/person</span>
         </div>
       </div>
       <a

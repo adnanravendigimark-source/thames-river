@@ -28,7 +28,7 @@ export default async function FeaturedTour() {
               </>
             )}
             <span>
-              from <span className="font-bold text-charcoal-900">€{tour.price}</span>
+              from <span className="font-bold text-charcoal-900">£{tour.price}</span>
             </span>
           </div>
         </div>

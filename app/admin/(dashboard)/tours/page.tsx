@@ -38,7 +38,7 @@ export default async function AdminToursPage() {
             <div className="min-w-0 flex-1">
               <p className="truncate font-medium text-stone-900">{tour.title}</p>
               <p className="text-sm text-stone-500">
-                €{tour.price} · {tour.ribbon || tour.badge} · id: {tour.id}
+                £{tour.price} · {tour.ribbon || tour.badge} · id: {tour.id}
               </p>
             </div>
             <Link

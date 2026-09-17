@@ -1,9 +1,9 @@
 {
-  "heroBadge": "THAMES RIVER CRUISE TICKETS",
-  "heroHeading": "Discover London's Iconic River",
-  "heroSubheading": "Book your Thames River cruise tickets in advance and see Big Ben, the London Eye, and Tower Bridge from the water. Breathtaking skyline views, live commentary, and unforgettable experiences await you.",
+  "heroBadge": "DISCOVER LONDON FROM THE WATER",
+  "heroHeading": "See London From a Different Perspective",
+  "heroSubheading": "Relax, explore and experience the best of London with our scenic river cruises. From iconic landmarks to unforgettable moments, it's a journey worth taking.",
   "heroImage": "/images/thames-hero.jpg",
-  "heroImageAlt": "A Thames river cruise boat passing Tower Bridge under a clear blue sky, London",
+  "heroImageAlt": "Thames river cruise boat passing Tower Bridge at sunset, London",
   "showFeaturedTour": true,
   "featuredTourId": "thames-1-hour-sightseeing-cruise",
   "featuredBadgeLabel": "Most Popular Cruise",

@@ -24,10 +24,10 @@ export default async function Hero() {
         ) : (
           <SafeImage
             src={heroImageSrc}
-            alt={content.heroImageAlt || "A Thames river cruise boat passing Tower Bridge, London"}
+            alt={content.heroImageAlt || "A Thames river cruise boat passing Tower Bridge at sunset, London"}
             fill
             priority
-            quality={75}
+            quality={85}
             sizes="100vw"
             className="object-cover object-[80%_72%] md:object-[78%_72%] lg:object-[82%_75%]"
           />

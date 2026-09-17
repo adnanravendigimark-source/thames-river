@@ -682,7 +682,7 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
                       {tours.map((tour, i) => (
                         <tr key={tour.id} className={`border-t border-stone-200 ${i % 2 ? "bg-stone-50" : ""}`}>
                           <td className="px-3 py-2 font-medium text-stone-900">{tour.title}</td>
-                          <td className="px-3 py-2 text-stone-700">€{tour.price}</td>
+                          <td className="px-3 py-2 text-stone-700">£{tour.price}</td>
                           <td className="px-3 py-2 text-stone-700">{tour.priceTableColumn1 || tour.duration}</td>
                           <td className="px-3 py-2 text-stone-700">
                             {tour.priceTableFeature || "Standard Pass"}

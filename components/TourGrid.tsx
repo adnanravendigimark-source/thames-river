@@ -125,7 +125,7 @@ export default async function TourGrid() {
                       </span>
                       <div className="flex items-baseline gap-1">
                         <span className="font-serif text-xl sm:text-2xl font-bold text-[#0B2545]">
-                          €{tour.price}
+                          £{tour.price}
                         </span>
                         <span className="text-[11px] text-[#1C2B3A]/70">/person</span>
                       </div>

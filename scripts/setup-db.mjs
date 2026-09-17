@@ -524,7 +524,22 @@ async function seedPrivacyPolicy() {
     rows.length > 0 &&
     Array.isArray(rows[0].content) &&
     rows[0].content.some((b) => b && typeof b.text === "string" && b.text.trim());
-  if (hasUsableContent) {
+  // Heal-check: content can be "usable" (non-empty) but still be stale copy
+  // left over from an earlier brand in this template's lineage (pena-palace/
+  // Colosseum/Versailles-Palace-family) rather than ever touching a row with
+  // genuinely admin-edited Thames content. Without this check a reused DB's
+  // Versailles-era privacy policy would silently survive every future
+  // `npm run setup-db`, since "already has content" alone doesn't mean
+  // "has OUR content".
+  const looksLikeWrongBrand =
+    hasUsableContent &&
+    rows[0].content.some(
+      (b) =>
+        b &&
+        typeof b.text === "string" &&
+        (b.text.includes("Versailles") || b.text.includes("Paris") || b.text.includes("Colosseum") || b.text.includes("Pena Palace") || b.text.includes("Sintra"))
+    );
+  if (hasUsableContent && !looksLikeWrongBrand) {
     console.log("privacy_policy: already has content — skipping seed.");
     return;
   }
