@@ -20,7 +20,6 @@ import type {
   TimelineRow,
   HoursRow,
   GalleryImage,
-  HeroFeature,
 } from "@/lib/homepage";
 import type { Tour } from "@/lib/data";
 
@@ -408,20 +407,6 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
                 <input value={content.heroCtaSecondaryHref} onChange={(e) => update("heroCtaSecondaryHref", e.target.value)} className={inputClass} />
               </Field>
             </div>
-            <Field label="Feature strip (the floating card of 4 items below the hero text)">
-              <RepeatableList<HeroFeature>
-                items={content.heroFeatures}
-                onChange={(heroFeatures) => update("heroFeatures", heroFeatures)}
-                newItem={() => ({ title: "New Feature", subtitle: "" })}
-                addLabel="+ Add feature"
-                renderItem={(feature, upd) => (
-                  <div className="grid gap-2 sm:grid-cols-2">
-                    <input value={feature.title} onChange={(e) => upd({ ...feature, title: e.target.value })} placeholder="Title" className={inputClass} />
-                    <input value={feature.subtitle} onChange={(e) => upd({ ...feature, subtitle: e.target.value })} placeholder="Subtitle" className={inputClass} />
-                  </div>
-                )}
-              />
-            </Field>
           </SectionCard>
 
           <SectionCard
