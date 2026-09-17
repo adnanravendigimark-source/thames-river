@@ -49,7 +49,7 @@ export default async function HomePage() {
       // AggregateRating/Review structured data that can't be substantiated.
       offers: {
         "@type": "Offer",
-        priceCurrency: "EUR",
+        priceCurrency: "GBP",
         price: t.price,
         availability: "https://schema.org/InStock",
         url: t.href,

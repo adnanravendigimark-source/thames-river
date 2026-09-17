@@ -53,9 +53,14 @@ export default async function Hero() {
           <div className="mt-3.5 mb-5 h-[2.5px] w-12 rounded-full bg-[#1E96E0]" />
 
           {/* Subtitle */}
-          <p className="text-sm sm:text-base text-[#1C2B3A] leading-relaxed max-w-lg font-normal">
-            Book your Thames River cruise tickets in advance and see London from the water. Iconic skyline views, live commentary, and unforgettable experiences await you.
-          </p>
+          <div
+            className="text-sm sm:text-base text-[#1C2B3A] leading-relaxed max-w-lg font-normal [&_p]:m-0"
+            dangerouslySetInnerHTML={{
+              __html:
+                content.heroSubheading ||
+                "Book your Thames River cruise tickets in advance and see London from the water. Iconic skyline views, live commentary, and unforgettable experiences await you.",
+            }}
+          />
 
           {/* Action Buttons */}
           <div className="mt-7 flex flex-wrap items-center gap-3.5 sm:gap-4">
