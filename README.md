@@ -60,3 +60,4 @@ This site's theme (nautical navy & sky blue), content, logo, and favicon are ori
 ## Images
 
 Photos in `/public/images` are original placeholder artwork generated for this project (no photo-generation or live photo-fetching tool was available when this site was built) — swap them for real Thames River / London landmark photography via the admin Media Library (`/admin` → Media Library) whenever you're ready to go live.
+# thames-river
