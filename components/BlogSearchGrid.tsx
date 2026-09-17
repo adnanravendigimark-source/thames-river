@@ -75,12 +75,12 @@ export default function BlogSearchGrid({
   return (
     <div>
       {/* Header bar: Count & Sort */}
-      <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#E9E1D3] pb-4">
-        <p className="text-xs font-medium text-[#26332B]/80">
+      <div className="flex flex-wrap items-center justify-between gap-4 border-b border-[#F3E5C8] pb-4">
+        <p className="text-xs font-medium text-[#2B221D]/80">
           Showing {sortedPosts.length === 0 ? 0 : start + 1} –{" "}
           {Math.min(start + PAGE_SIZE, sortedPosts.length)} of {sortedPosts.length} articles
           {selectedCategory && selectedCategory !== "All" && (
-            <span className="ml-2 inline-flex items-center gap-1 rounded-md bg-[#F7F3EA] border border-[#E9E1D3] px-2 py-0.5 text-[11px] font-semibold text-[#D6A33A]">
+            <span className="ml-2 inline-flex items-center gap-1 rounded-md bg-[#FBF3E4] border border-[#F3E5C8] px-2 py-0.5 text-[11px] font-semibold text-[#C98A22]">
               {selectedCategory}
               <button
                 type="button"
@@ -103,12 +103,12 @@ export default function BlogSearchGrid({
               id="sort-select"
               value={sortOrder}
               onChange={(e) => setSortOrder(e.target.value as "newest" | "oldest")}
-              className="appearance-none rounded-lg border border-[#E9E1D3] bg-white py-1.5 pl-3 pr-8 text-xs font-semibold text-[#123B27] shadow-sm transition hover:border-[#123B27] focus:border-[#123B27] focus:outline-none cursor-pointer"
+              className="appearance-none rounded-lg border border-[#F3E5C8] bg-white py-1.5 pl-3 pr-8 text-xs font-semibold text-[#6B3113] shadow-sm transition hover:border-[#6B3113] focus:border-[#6B3113] focus:outline-none cursor-pointer"
             >
               <option value="newest">Newest First</option>
               <option value="oldest">Oldest First</option>
             </select>
-            <span className="pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-xs text-[#26332B]/60">
+            <span className="pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-xs text-[#2B221D]/60">
               ▾
             </span>
           </div>
@@ -117,7 +117,7 @@ export default function BlogSearchGrid({
 
       {/* Grid */}
       {sortedPosts.length === 0 ? (
-        <div className="mt-8 rounded-2xl border border-dashed border-[#E9E1D3] p-12 text-center text-sm text-[#26332B]/60">
+        <div className="mt-8 rounded-2xl border border-dashed border-[#F3E5C8] p-12 text-center text-sm text-[#2B221D]/60">
           No articles found matching your criteria.
         </div>
       ) : (
@@ -126,9 +126,9 @@ export default function BlogSearchGrid({
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="group flex flex-col overflow-hidden rounded-2xl border border-[#E9E1D3] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#D6A33A]/40 hover:shadow-lg"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-[#F3E5C8] bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#C98A22]/40 hover:shadow-lg"
             >
-              <div className="relative aspect-[16/10] overflow-hidden bg-[#123B27]">
+              <div className="relative aspect-[16/10] overflow-hidden bg-[#6B3113]">
                 <SafeImage
                   src={post.image}
                   alt={post.imageAlt || post.title}
@@ -142,36 +142,36 @@ export default function BlogSearchGrid({
               <div className="flex flex-1 flex-col p-5">
                 {/* Category Pill */}
                 <div className="mb-2.5">
-                  <span className="inline-block rounded-md bg-[#F7F3EA] border border-[#E9E1D3] px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-[#D6A33A]">
+                  <span className="inline-block rounded-md bg-[#FBF3E4] border border-[#F3E5C8] px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-[#C98A22]">
                     {post.category}
                   </span>
                 </div>
 
                 {/* Date and Read Time */}
-                <div className="flex items-center gap-3 text-[11px] font-medium text-[#26332B]/60">
+                <div className="flex items-center gap-3 text-[11px] font-medium text-[#2B221D]/60">
                   <span className="inline-flex items-center gap-1">
-                    <CalendarIcon className="h-3.5 w-3.5 text-[#D6A33A]" />
+                    <CalendarIcon className="h-3.5 w-3.5 text-[#C98A22]" />
                     {formatDate(post.date)}
                   </span>
                   <span className="inline-flex items-center gap-1">
-                    <ClockPayIcon className="h-3.5 w-3.5 text-[#D6A33A]" />
+                    <ClockPayIcon className="h-3.5 w-3.5 text-[#C98A22]" />
                     {post.readTime}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h2 className="mt-2.5 line-clamp-2 font-serif text-[15px] font-bold leading-snug text-[#123B27] transition-colors group-hover:text-[#D6A33A]">
+                <h2 className="mt-2.5 line-clamp-2 font-serif text-[15px] font-bold leading-snug text-[#6B3113] transition-colors group-hover:text-[#C98A22]">
                   {post.title}
                 </h2>
 
                 {/* Excerpt */}
-                <p className="mt-2 line-clamp-2 flex-1 text-xs leading-relaxed text-[#26332B]/80">
+                <p className="mt-2 line-clamp-2 flex-1 text-xs leading-relaxed text-[#2B221D]/80">
                   {post.excerpt}
                 </p>
 
                 {/* Read More link */}
-                <div className="mt-4 pt-2 border-t border-[#E9E1D3]">
-                  <span className="inline-flex items-center gap-1 text-xs font-bold text-[#123B27] transition group-hover:text-[#D6A33A]">
+                <div className="mt-4 pt-2 border-t border-[#F3E5C8]">
+                  <span className="inline-flex items-center gap-1 text-xs font-bold text-[#6B3113] transition group-hover:text-[#C98A22]">
                     Read More <span className="transition-transform group-hover:translate-x-1">→</span>
                   </span>
                 </div>
@@ -189,7 +189,7 @@ export default function BlogSearchGrid({
             onClick={() => goTo(currentPage - 1)}
             disabled={currentPage === 1}
             aria-label="Previous page"
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#E9E1D3] bg-white text-xs font-bold text-[#123B27] transition hover:border-[#123B27] disabled:opacity-30 disabled:hover:border-[#E9E1D3]"
+            className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#F3E5C8] bg-white text-xs font-bold text-[#6B3113] transition hover:border-[#6B3113] disabled:opacity-30 disabled:hover:border-[#F3E5C8]"
           >
             ‹
           </button>
@@ -203,7 +203,7 @@ export default function BlogSearchGrid({
             ) {
               if (p === 2 || p === totalPages - 1) {
                 return (
-                  <span key={p} className="px-1 text-xs text-[#26332B]/60">
+                  <span key={p} className="px-1 text-xs text-[#2B221D]/60">
                     ...
                   </span>
                 );
@@ -219,8 +219,8 @@ export default function BlogSearchGrid({
                 aria-current={p === currentPage ? "page" : undefined}
                 className={`flex h-9 w-9 items-center justify-center rounded-lg text-xs font-bold transition ${
                   p === currentPage
-                    ? "bg-[#123B27] text-white shadow-sm"
-                    : "border border-[#E9E1D3] bg-white text-[#123B27] hover:border-[#123B27]"
+                    ? "bg-[#6B3113] text-white shadow-sm"
+                    : "border border-[#F3E5C8] bg-white text-[#6B3113] hover:border-[#6B3113]"
                 }`}
               >
                 {p}
@@ -233,7 +233,7 @@ export default function BlogSearchGrid({
             onClick={() => goTo(currentPage + 1)}
             disabled={currentPage === totalPages}
             aria-label="Next page"
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#E9E1D3] bg-white text-xs font-bold text-[#123B27] transition hover:border-[#123B27] disabled:opacity-30 disabled:hover:border-[#E9E1D3]"
+            className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#F3E5C8] bg-white text-xs font-bold text-[#6B3113] transition hover:border-[#6B3113] disabled:opacity-30 disabled:hover:border-[#F3E5C8]"
           >
             ›
           </button>

@@ -2,12 +2,13 @@
 //
 // What it does:
 //   1. Creates every table the app needs, if they don't already exist.
-//   2. If a table is empty, seeds it from the matching file in /data (the
-//      real Colosseum Arena Tickets starter content) so the site has
-//      real tours/posts/FAQs/homepage copy from the first run.
+//   2. If a table is empty, seeds it from the matching file in /data (this
+//      project's own Versailles Palace Tickets starter content) so the site
+//      has real tours/posts/FAQs/homepage copy from the first run.
 //
 // How to run it:
-//   1. Add DATABASE_URL to your .env file
+//   1. Add DATABASE_URL to your .env file (see README.md — this must be a
+//      new, independent Neon project, never shared with another site)
 //   2. Run: node scripts/setup-db.mjs
 
 import fs from "fs";
@@ -457,7 +458,7 @@ async function seedPosts() {
         recommended_tour_id, recommended_tour_after_block, content, sort_order
       ) VALUES (
         ${p.slug}, ${p.title}, ${p.metaTitle || p.title}, ${p.metaDescription || p.excerpt || ""},
-        ${p.category || "Pena Palace Guides"}, ${p.excerpt || ""}, ${p.quickAnswer || ""},
+        ${p.category || "Versailles Palace Guides"}, ${p.excerpt || ""}, ${p.quickAnswer || ""},
         ${p.readTime || "5 min read"}, ${date}, ${p.image || p.coverImage || ""},
         ${p.imageAlt || p.coverImageAlt || ""},
         ${p.recommendedTourId || ""}, ${p.recommendedTourAfterBlock ?? null},
@@ -558,17 +559,18 @@ async function seedPrivacyPolicy() {
 
 async function seedSiteSettings() {
   const rows = await sql`SELECT blog_meta_title FROM site_settings WHERE id = 1`;
-  const blogTitle = "Pena Palace Blog | Tickets, Tours, Prices & Tips (2026)";
+  const blogTitle = "Versailles Palace Blog | Tickets, Tours, Prices & Tips (2026)";
   const blogDescription =
-    "Comprehensive travel and visitor guides for Pena Palace tickets — skip-the-line access, guided tour options, booking strategies, and pricing.";
+    "Comprehensive travel and visitor guides for Versailles Palace tickets — skip-the-line access, guided tour options, booking strategies, and pricing.";
 
   const existing = rows[0];
-  // This seed previously left leftover Colosseum/Rome blog SEO copy behind
-  // (same class of bug as seedContactPage/seedAboutPage above). Heal that
-  // specific, provably-wrong case; never touch a row with different, real
-  // admin-set copy.
+  // Heal a mismatched-brand row (e.g. left over from copying this project
+  // from its pena-palace/Colosseum-family template) rather than ever
+  // touching a row with different, real admin-set copy.
   const looksLikeWrongBrand =
-    existing && typeof existing.blog_meta_title === "string" && existing.blog_meta_title.includes("Colosseum");
+    existing &&
+    typeof existing.blog_meta_title === "string" &&
+    (existing.blog_meta_title.includes("Colosseum") || existing.blog_meta_title.includes("Pena Palace"));
 
   if (existing && !looksLikeWrongBrand) {
     console.log("site_settings: already configured — skipping seed.");
@@ -577,7 +579,7 @@ async function seedSiteSettings() {
 
   if (existing) {
     await sql`UPDATE site_settings SET blog_meta_title = ${blogTitle}, blog_meta_description = ${blogDescription} WHERE id = 1`;
-    console.log("site_settings: healed mismatched Colosseum blog SEO copy with Pena Palace copy.");
+    console.log("site_settings: healed mismatched blog SEO copy with Versailles Palace copy.");
     return;
   }
 
@@ -595,37 +597,38 @@ async function seedAboutPage() {
   // rich-text page, same design as amsterdam/colosseum/arno).
   const a = {
     heroEyebrow: "About Us",
-    heroHeading: "Your Trusted Guide to Pena Palace Tickets & Sintra Visits",
+    heroHeading: "Your Trusted Guide to Versailles Palace Tickets & Paris Day Trips",
     heroSubheading:
-      "We help travelers navigate Pena Palace ticket options, secure guaranteed timed-entry reservations, avoid sold-out slots, and experience Sintra's Romanticist masterpiece with licensed local guides.",
-    heroImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Image%20of%20Pena%20Palace%2C%20Sintra%2C%20Portugal.jpg",
-    heroImageAlt: "Pena Palace's colorful towers overlooking the Sintra hills at golden hour",
-    content: `<h2>Why We Created Pena Palace Tickets</h2>
-<p>Visiting Pena Palace is a bucket-list dream for millions of travelers, but the ticket booking process can be confusing. Between limited timed-entry slots, multiple ticket tiers (Park + Palace vs Park Only), and long queues at the box office in peak season, finding the right ticket shouldn't be difficult.</p>
-<p>Pena Palace Tickets is an independent travel portal dedicated to providing clear, transparent comparisons of official fast-track tickets, guaranteed timed-entry access, and licensed guide-led tours in partnership with verified Portuguese providers.</p>
-<h2>How We Curate Sintra Tours & Tickets</h2>
+      "We help travelers navigate Versailles Palace ticket options, secure guaranteed timed-entry reservations, avoid sold-out slots, and experience Louis XIV's Hall of Mirrors with licensed local guides.",
+    heroImage: "/images/versailles-hero.jpg",
+    heroImageAlt: "The golden gates and gilded facade of the Palace of Versailles at golden hour",
+    content: `<h2>Why We Created Versailles Palace Tickets</h2>
+<p>Visiting the Palace of Versailles is a bucket-list dream for millions of travelers, but the ticket booking process can be confusing. Between limited timed-entry slots, multiple ticket tiers (Palace vs Estate of Trianon), and long queues at the box office in peak season, finding the right ticket shouldn't be difficult.</p>
+<p>Versailles Palace Tickets is an independent travel portal dedicated to providing clear, transparent comparisons of official fast-track tickets, guaranteed timed-entry access, and licensed guide-led tours in partnership with verified French providers.</p>
+<h2>How We Curate Versailles Tours & Tickets</h2>
 <p>Every ticket and guided experience featured on our site meets rigorous quality, reliability, and security standards.</p>
 <ul>
-<li><strong>Guaranteed Timed Palace Entry</strong> — Every pre-booked ticket comes with an official timed reservation to explore the Palace interior without sold-out risk.</li>
-<li><strong>Licensed Local Guides</strong> — Our featured guided tours are led by certified Portuguese guides with exceptional traveler ratings.</li>
+<li><strong>Guaranteed Timed Palace Entry</strong> — Every pre-booked ticket comes with an official timed reservation to explore the Hall of Mirrors and State Apartments without sold-out risk.</li>
+<li><strong>Licensed Local Guides</strong> — Our featured guided tours are led by certified French guides with exceptional traveler ratings.</li>
 <li><strong>100% Free 24h Cancellation</strong> — Transparent pricing with flexible 100% free cancellation up to 24 hours before your scheduled entry time.</li>
-<li><strong>Complete Park & Palace Access</strong> — Tickets covering the Palace interior, Pena Park's gardens, and the Chalet of the Countess d'Edla.</li>
+<li><strong>Complete Palace & Estate Access</strong> — Tickets covering the main Palace interior, the Gardens of Versailles, and the Estate of Trianon.</li>
 </ul>
 <h2>Affiliate Transparency</h2>
-<p>When you book Pena Palace tickets or tours through links on our site, we may receive an affiliate commission at no extra cost to you. This enables us to maintain up-to-date, independent travel guides and pricing data for global visitors.</p>
-<p>Have questions about visiting Pena Palace? Get in touch with our team on our <a href="/contact">contact page</a>.</p>`,
-    metaTitle: "About Us | Pena Palace Tickets & Sintra Visitor Guide",
+<p>When you book Versailles Palace tickets or tours through links on our site, we may receive an affiliate commission at no extra cost to you. This enables us to maintain up-to-date, independent travel guides and pricing data for global visitors.</p>
+<p>Have questions about visiting Versailles? Get in touch with our team on our <a href="/contact">contact page</a>.</p>`,
+    metaTitle: "About Us | Versailles Palace Tickets & Paris Visitor Guide",
     metaDescription:
-      "Learn about Pena Palace Tickets: our mission, curation standards, and independent guide to the best Pena Palace passes and Sintra day trips.",
+      "Learn about Versailles Palace Tickets: our mission, curation standards, and independent guide to the best Versailles passes and Paris day trips.",
   };
   const existing = rows[0];
   const hasRealContent = existing && typeof existing.content === "string" && existing.content.trim().length > 0;
-  // A leftover bug in an earlier version of this script seeded About pages
-  // with Colosseum Arena Entry copy instead of Florence copy. Heal that
-  // specific, provably-wrong case automatically; otherwise never touch a
-  // row that already has real content (an admin may have edited it).
+  // Heal a mismatched-brand row (e.g. left over from copying this project
+  // from its pena-palace/Colosseum-family template) rather than ever
+  // touching a row with real, different admin-authored content.
   const looksLikeWrongBrand =
-    existing && typeof existing.hero_heading === "string" && existing.hero_heading.includes("Colosseum");
+    existing &&
+    typeof existing.hero_heading === "string" &&
+    (existing.hero_heading.includes("Colosseum") || existing.hero_heading.includes("Pena Palace") || existing.hero_heading.includes("Sintra"));
 
   if (existing && hasRealContent && !looksLikeWrongBrand) {
     console.log("about_page: already configured — skipping seed.");
@@ -645,7 +648,7 @@ async function seedAboutPage() {
         meta_description = ${a.metaDescription}
       WHERE id = 1
     `;
-    console.log("about_page: healed mismatched/empty content with Pena Palace About page copy.");
+    console.log("about_page: healed mismatched/empty content with Versailles Palace About page copy.");
     return;
   }
 
@@ -664,42 +667,41 @@ async function seedAboutPage() {
 
 async function seedContactPage() {
   const rows = await sql`SELECT hero_heading, email FROM contact_page WHERE id = 1`;
-  // Matches DEFAULT_CONTACT in lib/contact.ts (already correctly Pena
-  // Palace-branded — this seed previously still had leftover Colosseum
-  // Arena Entry copy, including a support@colosseumarenaentry.com email
-  // address, which is what a fresh install — or a row still carrying that
-  // copy — would show live. Heal that specific, provably-wrong case
-  // automatically; never touch a row that already has different, real
-  // admin content.
+  // Matches DEFAULT_CONTACT in lib/contact.ts. Heals a mismatched-brand row
+  // (e.g. left over from copying this project from its pena-palace/
+  // Colosseum-family template) rather than ever touching a row with
+  // different, real admin content.
   const reasons = [
-    { icon: "HeadsetIcon", title: "Ticket Selection Advice", body: "Need help choosing between the Park + Palace ticket, Park Only ticket, or a licensed guide-led tour? Ask our Sintra specialists." },
-    { icon: "BriefcaseIcon", title: "Partnerships & Operators", body: "Licensed Portuguese tour operators, tourism authorities, and travel publishers — reach out regarding listings and collaborations." },
-    { icon: "MailIcon", title: "General Inquiries", body: "Feedback, visitor tips, accessibility questions, or editorial suggestions for our Pena Palace guides." },
+    { icon: "HeadsetIcon", title: "Ticket Selection Advice", body: "Need help choosing between the Palace ticket, Estate of Trianon ticket, or a licensed guide-led tour? Ask our Versailles specialists." },
+    { icon: "BriefcaseIcon", title: "Partnerships & Operators", body: "Licensed French tour operators, tourism authorities, and travel publishers — reach out regarding listings and collaborations." },
+    { icon: "MailIcon", title: "General Inquiries", body: "Feedback, visitor tips, accessibility questions, or editorial suggestions for our Versailles Palace guides." },
   ];
   const c = {
     heroEyebrow: "Contact Us",
-    heroHeading: "Get in Touch with Our Sintra Travel Team",
+    heroHeading: "Get in Touch with Our Paris Travel Team",
     heroSubheading:
-      "Questions about booking Pena Palace tickets, timed-entry slots, guided tour options, or partnership inquiries? Reach out to our team directly.",
+      "Questions about booking Versailles Palace tickets, timed-entry slots, guided tour options, or partnership inquiries? Reach out to our team directly.",
     email: "livetravelpartner@gmail.com",
     emailNote: "We typically respond within 1–2 business days.",
     reasonsHeading: "How We Can Help",
     footerNote:
       "Already booked? Please refer to your confirmation voucher to contact your tour provider directly for real-time meeting point directions or schedule changes.",
-    ctaHeading: "Ready to reserve your Pena Palace tickets?",
-    ctaButtonLabel: "Compare Pena Palace Tickets & Tours",
-    metaTitle: "Contact Us | Pena Palace Tickets",
+    ctaHeading: "Ready to reserve your Versailles Palace tickets?",
+    ctaButtonLabel: "Compare Versailles Palace Tickets & Tours",
+    metaTitle: "Contact Us | Versailles Palace Tickets",
     metaDescription:
-      "Questions about Pena Palace tickets, timed-entry passes, or visiting Sintra? Contact the Pena Palace Tickets team.",
+      "Questions about Versailles Palace tickets, timed-entry passes, or visiting Paris? Contact the Versailles Palace Tickets team.",
   };
 
   const existing = rows[0];
   const looksLikeWrongBrand =
-    existing && typeof existing.hero_heading === "string" && existing.hero_heading.includes("Rome");
+    existing &&
+    typeof existing.hero_heading === "string" &&
+    (existing.hero_heading.includes("Rome") || existing.hero_heading.includes("Sintra") || existing.hero_heading.includes("Pena Palace"));
   // The contact email is standardized to livetravelpartner@gmail.com across
   // every site in this family. Heal it on its own — regardless of the
-  // wrong-brand check above — so a row with otherwise-correct Florence copy
-  // but a stale support@ address still gets the right email.
+  // wrong-brand check above — so a row with otherwise-correct copy but a
+  // stale support@ address still gets the right email.
   const emailNeedsHealing = existing && existing.email !== c.email;
 
   if (existing && !looksLikeWrongBrand && !emailNeedsHealing) {
@@ -730,7 +732,7 @@ async function seedContactPage() {
         meta_description = ${c.metaDescription}
       WHERE id = 1
     `;
-    console.log("contact_page: healed mismatched Colosseum/Rome copy with Pena Palace Contact page copy.");
+    console.log("contact_page: healed mismatched copy with Versailles Palace Contact page copy.");
     return;
   }
 
@@ -764,7 +766,7 @@ async function main() {
   await seedSiteSettings();
   await seedAboutPage();
   await seedContactPage();
-  console.log("\nDone. Pena Palace Tickets database is ready.");
+  console.log("\nDone. Versailles Palace Tickets database is ready.");
 }
 
 main()

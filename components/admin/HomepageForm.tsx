@@ -587,7 +587,7 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
                 addLabel="+ Add row"
                 renderItem={(row, upd) => (
                   <div className="grid gap-2 sm:grid-cols-2">
-                    <input value={row.range} onChange={(e) => upd({ ...row, range: e.target.value })} placeholder="e.g. Pena Palace" className={inputClass} />
+                    <input value={row.range} onChange={(e) => upd({ ...row, range: e.target.value })} placeholder="e.g. Versailles Palace" className={inputClass} />
                     <input value={row.time} onChange={(e) => upd({ ...row, time: e.target.value })} placeholder="e.g. 8:15 AM – 7:30 PM" className={inputClass} />
                   </div>
                 )}
@@ -985,7 +985,7 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
                 )}
               </div>
               <div className="bg-stone-50 p-3">
-                <p className="truncate text-xs uppercase tracking-wide text-stone-400">penapalaceentry.com</p>
+                <p className="truncate text-xs uppercase tracking-wide text-stone-400">versaillespalacetickets.com</p>
                 <p className="mt-0.5 truncate text-sm font-semibold text-stone-900">{content.ogTitle || content.metaTitle || content.heroHeading}</p>
                 <p className="mt-0.5 line-clamp-2 text-xs text-stone-500">{(content.ogDescription || content.metaDescription || content.heroSubheading).replace(/<[^>]+>/g, "")}</p>
               </div>
@@ -1062,7 +1062,7 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
         <div className="space-y-5">
           <SectionCard title="Focus keyword" description="The main phrase you want the homepage to rank for. Purely a writing aid — nothing here is sent to Google.">
             <Field label="Focus keyword">
-              <input value={content.focusKeyword} onChange={(e) => update("focusKeyword", e.target.value)} className={inputClass} placeholder="e.g. Pena Palace tickets" />
+              <input value={content.focusKeyword} onChange={(e) => update("focusKeyword", e.target.value)} className={inputClass} placeholder="e.g. Versailles Palace tickets" />
             </Field>
             {focusChecklist && (
               <ul className="space-y-1.5 rounded-xl border border-stone-200 bg-stone-50 p-4 text-sm">

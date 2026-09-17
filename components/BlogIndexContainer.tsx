@@ -35,15 +35,15 @@ export default function BlogIndexContainer({
     <div id="articles-section" className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:grid lg:grid-cols-[1fr_280px] lg:gap-10">
       <div>
         <div className="mb-6">
-          <h2 className="font-serif text-2xl font-bold text-[#123B27] sm:text-3xl">Latest Guides</h2>
-          <p className="mt-1.5 text-xs text-[#26332B]/80 sm:text-sm">
-            Expert tips, travel guides and everything you need to know about Pena Palace and Sintra day trips.
+          <h2 className="font-serif text-2xl font-bold text-[#6B3113] sm:text-3xl">Latest Guides</h2>
+          <p className="mt-1.5 text-xs text-[#2B221D]/80 sm:text-sm">
+            Expert tips, travel guides and everything you need to know about the Palace of Versailles and Paris day trips.
           </p>
         </div>
 
         <div>
           {posts.length === 0 ? (
-            <p className="rounded-2xl border border-dashed border-[#E9E1D3] p-12 text-center text-sm text-[#26332B]/60">
+            <p className="rounded-2xl border border-dashed border-[#F3E5C8] p-12 text-center text-sm text-[#2B221D]/60">
               {emptyStateText}
             </p>
           ) : (

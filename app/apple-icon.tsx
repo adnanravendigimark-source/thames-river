@@ -13,63 +13,43 @@ export default function AppleIcon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "linear-gradient(135deg, #123B27 0%, #092015 100%)",
+          background: "linear-gradient(135deg, #6B3113 0%, #200F05 100%)",
           borderRadius: "40px",
-          border: "4px solid #D6A33A",
+          border: "4px solid #C98A22",
         }}
       >
-        <svg
-          width="120"
-          height="120"
-          viewBox="0 0 48 48"
-          fill="none"
-        >
-          {/* Base battlements & ground */}
-          <path
-            d="M4 42h40M7 42V31h4v11M11 31h4V22h4v20M19 22h6v20M25 24h4v18M29 27h6v15M35 30h6v12"
-            stroke="#D6A33A"
-            strokeWidth="1.8"
-            strokeLinejoin="round"
-          />
-          {/* Left Clock Tower & Spire */}
-          <path
-            d="M9 31V16l4-6 4 6v15"
-            fill="#D6A33A"
-            fillOpacity="0.25"
-            stroke="#D6A33A"
-            strokeWidth="1.8"
-            strokeLinejoin="round"
-          />
-          <path d="M13 10V5M11 7h4" stroke="#D6A33A" strokeWidth="1.5" strokeLinecap="round" />
-          <circle cx="13" cy="19" r="2" fill="#D6A33A" />
-          
-          {/* Central Pena Palace Onion Dome & Minaret */}
-          <path
-            d="M21 22V14c0-3 3-6 4-8 1 2 4 5 4 8v8"
-            fill="#D6A33A"
-            fillOpacity="0.35"
-            stroke="#D6A33A"
-            strokeWidth="1.8"
-            strokeLinejoin="round"
-          />
-          <line x1="25" y1="4" x2="25" y2="6" stroke="#D6A33A" strokeWidth="1.8" strokeLinecap="round" />
-          <line x1="23.5" y1="5" x2="26.5" y2="5" stroke="#D6A33A" strokeWidth="1.5" strokeLinecap="round" />
+        <svg width="120" height="120" viewBox="0 0 48 48" fill="none">
+          {/* Ground line */}
+          <path d="M3 42h42" stroke="#C98A22" strokeWidth="1.8" strokeLinecap="round" />
 
-          {/* Right Tower & Moorish Spire */}
-          <path
-            d="M31 27V15l3-3 3 3v12"
-            fill="#D6A33A"
-            fillOpacity="0.25"
-            stroke="#D6A33A"
-            strokeWidth="1.8"
-            strokeLinejoin="round"
-          />
-          <path d="M34 12V8M32.5 9.5h3" stroke="#D6A33A" strokeWidth="1.5" strokeLinecap="round" />
+          {/* Left wing */}
+          <path d="M6 42V29h11v13" stroke="#C98A22" strokeWidth="1.8" strokeLinejoin="round" />
+          <rect x="8.5" y="33" width="2.5" height="4" fill="#C98A22" />
+          <rect x="13" y="33" width="2.5" height="4" fill="#C98A22" />
 
-          {/* Arches */}
-          <path d="M11 37a2 2 0 0 1 4 0v5h-4v-5z" fill="#D6A33A" />
-          <path d="M21 34a3 3 0 0 1 6 0v8h-6v-8z" fill="#D6A33A" />
-          <path d="M31 36a2 2 0 0 1 4 0v6h-4v-6z" fill="#D6A33A" />
+          {/* Right wing */}
+          <path d="M31 42V29h11v13" stroke="#C98A22" strokeWidth="1.8" strokeLinejoin="round" />
+          <rect x="32.5" y="33" width="2.5" height="4" fill="#C98A22" />
+          <rect x="37" y="33" width="2.5" height="4" fill="#C98A22" />
+
+          {/* Central corps de logis */}
+          <path d="M15 42V18h18v24" stroke="#C98A22" strokeWidth="1.8" strokeLinejoin="round" />
+          {/* Pediment */}
+          <path d="M15 18l9-8 9 8" fill="#C98A22" fillOpacity="0.3" stroke="#C98A22" strokeWidth="1.8" strokeLinejoin="round" />
+
+          {/* Sun King emblem above pediment */}
+          <circle cx="24" cy="7" r="2" fill="#C98A22" />
+          <path
+            d="M24 1.5v2M24 10.5v2M18.5 7h2M27.5 7h2M20 3l1.4 1.4M26.6 8.6L28 10M28 3l-1.4 1.4M21.4 8.6L20 10"
+            stroke="#C98A22"
+            strokeWidth="1.2"
+            strokeLinecap="round"
+          />
+
+          {/* Central facade arched windows */}
+          <path d="M18.5 24a1.6 1.6 0 0 1 3.2 0v6h-3.2v-6z" fill="#C98A22" />
+          <path d="M22.4 24a1.6 1.6 0 0 1 3.2 0v6h-3.2v-6z" fill="#C98A22" />
+          <path d="M26.3 24a1.6 1.6 0 0 1 3.2 0v6h-3.2v-6z" fill="#C98A22" />
         </svg>
       </div>
     ),

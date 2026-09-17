@@ -8,128 +8,128 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Deep Forest Green ⭐ #123B27 → Primary brand, CTA buttons, footer
-        // Pine Green #1F5135 (600 step) → Headings, secondary elements
+        // Burnt Terracotta ⭐ #6B3113 → Primary brand, CTA buttons, footer
+        // Terracotta #8A3F19 (600 step) → Headings, secondary elements
         navy: {
-          50: "#EAF3EC",
-          100: "#CFE4D5",
-          200: "#A3CBAE",
-          300: "#78B187",
-          400: "#4C9563",
-          500: "#2F7849",
-          600: "#1F5135", // Pine Green — headings, secondary elements
-          700: "#123B27", // Deep Forest Green — Brand Primary
-          800: "#0D2E1E",
-          900: "#081F14",
-          950: "#05140D",
+          50: "#FBEDE6",
+          100: "#F5D6C4",
+          200: "#E9B08A",
+          300: "#DC8A57",
+          400: "#CB6935",
+          500: "#B0511F",
+          600: "#8A3F19", // Terracotta — headings, secondary elements
+          700: "#6B3113", // Burnt Terracotta — Brand Primary
+          800: "#4E240D",
+          900: "#341809",
+          950: "#200F05",
         },
-        // Warm Ivory #F7F3EA → Main background
+        // Warm Cream #FBF3E4 → Main background
         marble: {
-          50: "#FDFCFA",
-          100: "#F7F3EA", // Main Background
-          200: "#EDE6D5",
-          300: "#E1D6BE",
-          400: "#D3C4A4",
+          50: "#FEFCF9",
+          100: "#FBF3E4", // Main Background
+          200: "#F3E5C8",
+          300: "#E9D3A8",
+          400: "#DCBC82",
         },
-        // Warm Sand #E9E1D3 → Cards, borders, separators
+        // Warm Sand #E7CFA3 → Cards, borders, separators
         tuscan: {
-          50: "#FBF9F5",
-          100: "#F7F2EA",
-          200: "#F0E8DA",
-          300: "#E9E1D3", // Brand Card/Section
-          400: "#D4C7AF",
-          500: "#BBA980",
-          600: "#9C8961",
-          700: "#7A6B4B",
-          800: "#574C36",
-          900: "#362F22",
-          950: "#201C14",
+          50: "#FCF8F1",
+          100: "#F8EEDD",
+          200: "#F1E1C4",
+          300: "#E7CFA3", // Brand Card/Section
+          400: "#D8B67B",
+          500: "#C39A54",
+          600: "#A17B3B",
+          700: "#7C5E2E",
+          800: "#593F1F",
+          900: "#372714",
+          950: "#21170C",
         },
-        // Palace Gold ⭐ #D6A33A → Logo, highlights, prices, accents
+        // Antique Gold ⭐ #C98A22 → Logo, highlights, prices, accents
         terracotta: {
-          50: "#FDF7E9",
-          100: "#FBEDC9",
-          200: "#F5DB98",
-          300: "#EEC968",
-          400: "#E4B64F",
-          500: "#D6A33A", // Brand Gold Accent
-          600: "#B3841F",
-          700: "#8C671A",
-          800: "#664B15",
-          900: "#40300E",
-          950: "#251C08",
+          50: "#FDF6E7",
+          100: "#FAE8BE",
+          200: "#F3D385",
+          300: "#EABD52",
+          400: "#DEA435",
+          500: "#C98A22", // Brand Gold Accent
+          600: "#A66E17",
+          700: "#815414",
+          800: "#5D3C10",
+          900: "#3B270B",
+          950: "#241706",
         },
-        // Soft Sage #DDE5D8 → Light sections and subtle backgrounds
+        // Soft Blush #EEDAC2 → Light sections and subtle backgrounds
         sky: {
-          50: "#FAFCF9",
-          100: "#F0F4EE",
-          200: "#DDE5D8", // Brand Secondary UI / light sections
-          300: "#C3D0BC",
-          400: "#A8BC9E",
-          500: "#8CA47F",
-          600: "#708960",
-          700: "#566C49",
-          800: "#3E4F35",
-          900: "#283322",
-          950: "#171E13",
+          50: "#FDF9F5",
+          100: "#F7EBDE",
+          200: "#EEDAC2", // Brand Secondary UI / light sections
+          300: "#E2C3A0",
+          400: "#D3AA7C",
+          500: "#C2905B",
+          600: "#A0733F",
+          700: "#7B592F",
+          800: "#574020",
+          900: "#372814",
+          950: "#211809",
         },
-        // Charcoal #26332B → Body text
+        // Warm Charcoal #2B221D → Body text
         charcoal: {
-          50: "#A9B2A9",
-          100: "#939C93",
-          200: "#7C857C",
-          300: "#656E65",
-          400: "#3F493F",
-          500: "#26332B", // Body text
-          600: "#202B24",
-          700: "#19221D",
-          800: "#131A16",
-          900: "#0D120F",
-          950: "#080B09",
+          50: "#ADA6A2",
+          100: "#98908B",
+          200: "#837A74",
+          300: "#6D645D",
+          400: "#453D37",
+          500: "#2B221D", // Body text
+          600: "#241C18",
+          700: "#1D1613",
+          800: "#16110E",
+          900: "#100C0A",
+          950: "#0A0807",
         },
         // Aliases for compatibility
         olive: {
-          50: "#EAF3EC",
-          100: "#CFE4D5",
-          200: "#A3CBAE",
-          300: "#78B187",
-          400: "#4C9563",
-          500: "#2F7849",
-          600: "#1F5135",
-          700: "#123B27",
-          800: "#0D2E1E",
-          900: "#081F14",
-          950: "#05140D",
+          50: "#FBEDE6",
+          100: "#F5D6C4",
+          200: "#E9B08A",
+          300: "#DC8A57",
+          400: "#CB6935",
+          500: "#B0511F",
+          600: "#8A3F19",
+          700: "#6B3113",
+          800: "#4E240D",
+          900: "#341809",
+          950: "#200F05",
         },
         cream: {
-          50: "#FDFCFA",
-          100: "#F7F3EA",
-          200: "#EDE6D5",
-          300: "#E1D6BE",
+          50: "#FEFCF9",
+          100: "#FBF3E4",
+          200: "#F3E5C8",
+          300: "#E9D3A8",
         },
         warmstone: {
-          50: "#FBF9F5",
-          100: "#F7F2EA",
-          200: "#F0E8DA",
-          300: "#E9E1D3",
-          400: "#D4C7AF",
-          500: "#BBA980",
-          600: "#9C8961",
-          700: "#7A6B4B",
-          800: "#574C36",
-          900: "#362F22",
+          50: "#FCF8F1",
+          100: "#F8EEDD",
+          200: "#F1E1C4",
+          300: "#E7CFA3",
+          400: "#D8B67B",
+          500: "#C39A54",
+          600: "#A17B3B",
+          700: "#7C5E2E",
+          800: "#593F1F",
+          900: "#372714",
         },
         sage: {
-          50: "#FAFCF9",
-          100: "#F0F4EE",
-          200: "#DDE5D8",
-          300: "#C3D0BC",
-          400: "#A8BC9E",
-          500: "#8CA47F",
-          600: "#708960",
-          700: "#566C49",
-          800: "#3E4F35",
-          900: "#283322",
+          50: "#FDF9F5",
+          100: "#F7EBDE",
+          200: "#EEDAC2",
+          300: "#E2C3A0",
+          400: "#D3AA7C",
+          500: "#C2905B",
+          600: "#A0733F",
+          700: "#7B592F",
+          800: "#574020",
+          900: "#372814",
         },
         // Admin-panel accent tokens, driven by the theme colors set on the
         // Homepage admin page (see app/layout.tsx, which writes these as
@@ -147,15 +147,15 @@ const config: Config = {
       },
       backgroundImage: {
         mosaic:
-          "radial-gradient(circle at 15% 25%, rgba(18,59,39,0.25) 0, transparent 45%), radial-gradient(circle at 85% 15%, rgba(221,229,216,0.30) 0, transparent 45%), radial-gradient(circle at 50% 85%, rgba(214,163,58,0.30) 0, transparent 50%)",
+          "radial-gradient(circle at 15% 25%, rgba(107,49,19,0.25) 0, transparent 45%), radial-gradient(circle at 85% 15%, rgba(238,218,194,0.30) 0, transparent 45%), radial-gradient(circle at 50% 85%, rgba(201,138,34,0.30) 0, transparent 50%)",
         "renaissance-pattern":
-          "radial-gradient(circle at 50% 0%, rgba(221,229,216,0.22) 0%, transparent 60%), radial-gradient(circle at 50% 100%, rgba(18,59,39,0.14) 0%, transparent 60%)",
+          "radial-gradient(circle at 50% 0%, rgba(238,218,194,0.22) 0%, transparent 60%), radial-gradient(circle at 50% 100%, rgba(107,49,19,0.14) 0%, transparent 60%)",
       },
       boxShadow: {
-        glow: "0 0 35px -5px rgba(18, 59, 39, 0.30)",
-        "gold-glow": "0 0 35px -5px rgba(214, 163, 58, 0.35)",
-        "blue-glow": "0 0 35px -5px rgba(18, 59, 39, 0.35)",
-        "terracotta-glow": "0 0 35px -5px rgba(214, 163, 58, 0.40)",
+        glow: "0 0 35px -5px rgba(107, 49, 19, 0.30)",
+        "gold-glow": "0 0 35px -5px rgba(201, 138, 34, 0.35)",
+        "blue-glow": "0 0 35px -5px rgba(107, 49, 19, 0.35)",
+        "terracotta-glow": "0 0 35px -5px rgba(201, 138, 34, 0.40)",
       },
     },
   },

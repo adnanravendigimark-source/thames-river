@@ -245,7 +245,7 @@ export default function PostForm({
                   value={post.title}
                   onChange={(e) => updateTitle(e.target.value)}
                   className={inputClass}
-                  placeholder="e.g. Pena Palace Guide: Tickets, Hours & Insider Tips"
+                  placeholder="e.g. Versailles Palace Guide: Tickets, Hours & Insider Tips"
                 />
               </Field>
 
@@ -268,7 +268,7 @@ export default function PostForm({
                       update("slug", slugify(e.target.value));
                     }}
                     className={`${inputClass} ${slugChanged ? "border-amber-400 bg-amber-50" : ""}`}
-                    placeholder="pena-palace-tickets-guide"
+                    placeholder="versailles-palace-tickets-guide"
                   />
                 </Field>
                 <Field label="Category" hint="Controls the category badge and sidebar category filters.">
@@ -277,13 +277,13 @@ export default function PostForm({
                     value={post.category}
                     onChange={(e) => update("category", e.target.value)}
                     className={inputClass}
-                    placeholder="e.g. Visitor Guide, Pena Palace Tickets, Tickets & Prices"
+                    placeholder="e.g. Visitor Guide, Versailles Palace Tickets, Tickets & Prices"
                   />
                 </Field>
               </div>
 
               <div className="grid gap-5 sm:grid-cols-3">
-                <Field label="Author" hint="e.g. Mariana Costa / Sintra Travel Writer">
+                <Field label="Author" hint="e.g. Camille Dubois / Versailles Travel Writer">
                   <input
                     value={post.author || ""}
                     onChange={(e) => update("author", e.target.value)}
@@ -455,7 +455,7 @@ export default function PostForm({
                   value={post.focusKeyword}
                   onChange={(e) => update("focusKeyword", e.target.value)}
                   className={inputClass}
-                  placeholder="e.g. Pena Palace Tickets"
+                  placeholder="e.g. Versailles Palace Tickets"
                 />
               </Field>
               {focusChecklist && (

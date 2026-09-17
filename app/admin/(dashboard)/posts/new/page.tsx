@@ -26,7 +26,7 @@ export default async function NewPostPage() {
     recommendedTourAfterBlock: 0,
     content: "",
     ctaHeading: "Ready to book?",
-    ctaBody: "Compare official Pena Palace ticket prices on the homepage.",
+    ctaBody: "Compare official Versailles Palace ticket prices on the homepage.",
     ctaButtonText: "See Price Comparison",
     ctaButtonHref: "/#prices",
     focusKeyword: "",

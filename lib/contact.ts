@@ -30,25 +30,25 @@ export interface ContactPageContent {
 
 const DEFAULT_CONTACT: ContactPageContent = {
   heroEyebrow: "Contact Us",
-  heroHeading: "Get in Touch with Our Sintra Travel Team",
+  heroHeading: "Get in Touch with Our Paris Travel Team",
   heroSubheading:
-    "Questions about booking Pena Palace tickets, timed-entry slots, guided tour options, or partnership inquiries? Reach out to our team directly.",
+    "Questions about booking Versailles Palace tickets, timed-entry slots, guided tour options, or partnership inquiries? Reach out to our team directly.",
   email: "livetravelpartner@gmail.com",
   emailLabel: "Email Us Directly",
   emailNote: "We typically respond within 1–2 business days.",
   reasonsHeading: "How We Can Help",
   reasons: [
-    { icon: "HeadsetIcon", title: "Ticket Selection Advice", body: "Need help choosing between the Park + Palace ticket, Park Only ticket, or a licensed guide-led tour? Ask our Sintra specialists." },
-    { icon: "BriefcaseIcon", title: "Partnerships & Operators", body: "Licensed Portuguese tour operators, tourism authorities, and travel publishers — reach out regarding listings and collaborations." },
-    { icon: "MailIcon", title: "General Inquiries", body: "Feedback, visitor tips, accessibility questions, or editorial suggestions for our Pena Palace guides." },
+    { icon: "HeadsetIcon", title: "Ticket Selection Advice", body: "Need help choosing between the Palace ticket, Estate of Trianon ticket, or a licensed guide-led tour? Ask our Versailles specialists." },
+    { icon: "BriefcaseIcon", title: "Partnerships & Operators", body: "Licensed French tour operators, tourism authorities, and travel publishers — reach out regarding listings and collaborations." },
+    { icon: "MailIcon", title: "General Inquiries", body: "Feedback, visitor tips, accessibility questions, or editorial suggestions for our Versailles Palace guides." },
   ],
   footerNote:
     "Already booked? Please refer to your confirmation voucher to contact your tour provider directly for real-time meeting point directions or schedule changes.",
-  ctaHeading: "Ready to reserve your Pena Palace tickets?",
-  ctaButtonLabel: "Compare Pena Palace Tickets & Tours",
-  metaTitle: "Contact Us | Pena Palace Tickets",
+  ctaHeading: "Ready to reserve your Versailles Palace tickets?",
+  ctaButtonLabel: "Compare Versailles Palace Tickets & Tours",
+  metaTitle: "Contact Us | Versailles Palace Tickets",
   metaDescription:
-    "Questions about Pena Palace tickets, timed-entry passes, or visiting Sintra? Contact the Pena Palace Tickets team.",
+    "Questions about Versailles Palace tickets, timed-entry passes, or visiting Paris? Contact the Versailles Palace Tickets team.",
   canonicalUrl: "",
   noIndex: false,
   noFollow: false,

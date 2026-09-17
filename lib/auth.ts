@@ -1,6 +1,6 @@
 import type { PageKey } from "./pageAccess";
 
-const SECRET = process.env.ADMIN_SESSION_SECRET || "pena-palace-admin-session-secret-2026-secure";
+const SECRET = process.env.ADMIN_SESSION_SECRET || "versailles-palace-admin-session-secret-2026-secure";
 export const ADMIN_COOKIE_NAME = "fce_admin_session";
 
 export type SessionRole = "admin" | "editor";

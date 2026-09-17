@@ -1,40 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Versailles Palace Tickets
+
+An independent travel/ticket-affiliate site for the Palace of Versailles, built with Next.js 14 (App Router), Neon Postgres, and a full admin CMS. This project was scaffolded from the same template family as pena-palace/amsterdam-boat-tours/sagrada-familia-tours/arno-boat-cruise, but runs on its own independent database, credentials, branding, and content — nothing is shared with those sites.
+
+## Stack
+
+- Next.js 14.2.5 (App Router) + TypeScript + Tailwind CSS
+- Neon serverless Postgres (raw SQL, no ORM) — falls back to starter content in `/data` if `DATABASE_URL` isn't set
+- Admin CMS at `/admin` (Tiptap rich-text editor, Vercel Blob media uploads, role-based user accounts)
+- GetYourGuide affiliate links for ticket/tour bookings
 
 ## Getting Started
 
-First, run the development server:
+### 1. Install dependencies
+
+```bash
+npm install
+```
+
+### 2. Set up your own database (do this before anything else)
+
+This project needs its **own** Neon Postgres project — never point it at another site's database.
+
+1. Create a new project at [neon.tech](https://neon.tech).
+2. Copy the connection string into `.env` as `DATABASE_URL`.
+3. Run the setup script to create every table and seed starter content:
+
+```bash
+node scripts/setup-db.mjs
+```
+
+Without `DATABASE_URL` set, the site still runs using the starter content baked into `/data`, but every admin write (saving a tour, a blog post, etc.) will fail until a real database is connected.
+
+### 3. Configure the rest of `.env`
+
+- `ADMIN_EMAIL` / `ADMIN_PASSWORD` — login for `/admin`. Change these before deploying.
+- `ADMIN_SESSION_SECRET` — already generated fresh for this project; keep it secret.
+- `GYG_PARTNER_ID` — your GetYourGuide affiliate Partner ID. Until you set a real one, ticket links use a placeholder ID and won't earn commission. Tour URLs in `/data/tours.json` and the `tours` table also use placeholder GetYourGuide product IDs (`t100001` etc.) — replace them with real listing URLs once you have live Versailles products on GetYourGuide, or point them at another affiliate network entirely.
+- `BLOB_STORE_ID` / `BLOB_READ_WRITE_TOKEN` — optional, only needed for the admin Media Library's image/video uploads. Create a [Vercel Blob store](https://vercel.com/docs/storage/vercel-blob) to enable it.
+- `NEXT_PUBLIC_TURNSTILE_SITE_KEY` / `TURNSTILE_SECRET_KEY` — optional, spam protection on the contact form. Create a [Cloudflare Turnstile](https://developers.cloudflare.com/turnstile/) site to enable it.
+
+### 4. Run the dev server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) for the public site, and [http://localhost:3000/admin](http://localhost:3000/admin) for the CMS.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## What's admin-editable
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Every public page's content is editable from `/admin` without touching code: Homepage (hero, gallery, CTAs, theme colors, header/footer), Tours & Tickets, FAQs, Blog posts, About page, Contact page, Privacy Policy, plus site-wide SEO/indexing controls, redirects, media library, and user accounts with page-level permissions.
 
-## Learn More
+## Branding
 
-To learn more about Next.js, take a look at the following resources:
+This site's theme (terracotta & gold), content, logo, and favicon are original to this project — distinct from every other site built off this same template. See `tailwind.config.ts` for the color palette and `app/icon.tsx` / `app/apple-icon.tsx` for the favicon/app icon.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Images
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# Colosseum-Arena-Tickets
-# pena-palace
-# pena-palace
-# pena-palace
+Photos in `/public/images` are original placeholder artwork generated for this project (no photo-generation or live photo-fetching tool was available when this site was built) — swap them for real Palace of Versailles photography via the admin Media Library (`/admin` → Media Library) whenever you're ready to go live.

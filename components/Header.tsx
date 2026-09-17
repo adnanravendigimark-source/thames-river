@@ -22,8 +22,8 @@ export default async function Header() {
       <div className="relative z-10 mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-8">
         <Logo
           logoImage={header.logoImage}
-          logoAlt={header.logoAlt || "Pena Palace Tickets"}
-          line1={header.logoLine1 || "PENA PALACE"}
+          logoAlt={header.logoAlt || "Versailles Palace Tickets"}
+          line1={header.logoLine1 || "VERSAILLES PALACE"}
           line2={header.logoLine2 || "— TICKETS —"}
         />
 
@@ -32,13 +32,13 @@ export default async function Header() {
         <div className="flex items-center gap-3">
           <a
             href={ctaHref}
-            className="hidden items-center gap-2 rounded-lg bg-[#123B27] px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-sm transition-all hover:bg-[#0D2E1E] hover:shadow-md md:inline-flex"
+            className="hidden items-center gap-2 rounded-lg bg-[#6B3113] px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white shadow-sm transition-all hover:bg-[#4E240D] hover:shadow-md md:inline-flex"
           >
             {/* Ticket Icon */}
             <svg
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#D6A33A"
+              stroke="#C98A22"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"

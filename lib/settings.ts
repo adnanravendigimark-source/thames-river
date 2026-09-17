@@ -12,9 +12,9 @@ export interface BlogSeoSettings {
 }
 
 const DEFAULT_SETTINGS: BlogSeoSettings = {
-  metaTitle: "Pena Palace Blog | Tickets, Tours, Prices & Tips (2026)",
+  metaTitle: "Versailles Palace Blog | Tickets, Tours, Prices & Tips (2026)",
   metaDescription:
-    "Comprehensive travel and visitor guides for Pena Palace tickets — skip-the-line park + palace passes, guided tours, Sintra day-trip planning, and combined attraction passes.",
+    "Comprehensive travel and visitor guides for Versailles Palace tickets — skip-the-line palace passes, guided tours, Paris day-trip planning, and combined attraction passes.",
   canonicalUrl: "",
   noIndex: false,
   noFollow: false,

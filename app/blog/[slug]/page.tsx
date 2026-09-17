@@ -89,7 +89,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
     dateModified: post.updatedAt || post.date,
     url: `${SITE_URL}/blog/${post.slug}`,
     authorName: post.author,
-    siteName: "Pena Palace Tickets",
+    siteName: "Versailles Palace Tickets",
   });
 
   const breadcrumbJsonLd = buildBreadcrumbJsonLd([
@@ -114,27 +114,27 @@ export default async function Post({ params }: { params: { slug: string } }) {
         <div className="mx-auto max-w-6xl px-4 pt-24 sm:pt-28">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-1 text-sm font-medium text-[#123B27] hover:text-[#D6A33A] transition-colors"
+            className="inline-flex items-center gap-1 text-sm font-medium text-[#6B3113] hover:text-[#C98A22] transition-colors"
           >
             {s.backToGuidesText}
           </Link>
 
           {/* Breadcrumbs */}
-          <nav aria-label="Breadcrumb" className="mt-3 text-xs font-medium text-[#26332B]/80">
+          <nav aria-label="Breadcrumb" className="mt-3 text-xs font-medium text-[#2B221D]/80">
             <ol className="flex flex-wrap items-center gap-1.5">
               <li>
-                <Link href="/" className="hover:text-[#D6A33A] transition-colors">
+                <Link href="/" className="hover:text-[#C98A22] transition-colors">
                   Home
                 </Link>
               </li>
-              <li className="text-[#26332B]/40">&gt;</li>
+              <li className="text-[#2B221D]/40">&gt;</li>
               <li>
-                <Link href="/blog" className="hover:text-[#D6A33A] transition-colors">
+                <Link href="/blog" className="hover:text-[#C98A22] transition-colors">
                   Blog
                 </Link>
               </li>
-              <li className="text-[#26332B]/40">&gt;</li>
-              <li className="font-semibold text-[#123B27] line-clamp-1" aria-current="page">
+              <li className="text-[#2B221D]/40">&gt;</li>
+              <li className="font-semibold text-[#6B3113] line-clamp-1" aria-current="page">
                 {post.title}
               </li>
             </ol>
@@ -142,40 +142,40 @@ export default async function Post({ params }: { params: { slug: string } }) {
 
           {/* Post Header */}
           <div className="mt-5">
-            <span className="inline-block rounded-md bg-white border border-gray-200 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#D6A33A] shadow-sm">
+            <span className="inline-block rounded-md bg-white border border-gray-200 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#C98A22] shadow-sm">
               {post.category}
             </span>
 
-            <h1 className="mt-3.5 font-serif text-3xl font-bold leading-tight text-[#123B27] sm:text-4xl lg:text-5xl">
+            <h1 className="mt-3.5 font-serif text-3xl font-bold leading-tight text-[#6B3113] sm:text-4xl lg:text-5xl">
               {post.title}
             </h1>
 
             {post.excerpt && (
-              <p className="mt-3.5 max-w-3xl text-sm leading-relaxed text-[#26332B]/80 sm:text-base">
+              <p className="mt-3.5 max-w-3xl text-sm leading-relaxed text-[#2B221D]/80 sm:text-base">
                 {post.excerpt}
               </p>
             )}
 
             {/* Author Meta Row */}
-            <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-medium text-[#26332B]/80">
+            <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-medium text-[#2B221D]/80">
               <span className="inline-flex items-center gap-1.5">
-                <CalendarIcon className="h-4 w-4 text-[#D6A33A]" />
+                <CalendarIcon className="h-4 w-4 text-[#C98A22]" />
                 {formatDate(post.date)}
               </span>
               <span className="inline-flex items-center gap-1.5">
-                <ClockPayIcon className="h-4 w-4 text-[#D6A33A]" />
+                <ClockPayIcon className="h-4 w-4 text-[#C98A22]" />
                 {post.readTime}
               </span>
               <span className="inline-flex items-center gap-2">
-                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#123B27] text-[10px] font-bold text-white">
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#6B3113] text-[10px] font-bold text-white">
                   {author.initials}
                 </span>
-                <span className="font-semibold text-[#123B27]">By {author.name}</span>
+                <span className="font-semibold text-[#6B3113]">By {author.name}</span>
               </span>
             </div>
 
             {/* Hero Cover Image */}
-            <div className="relative mt-6 aspect-[16/9] sm:aspect-[21/10] w-full overflow-hidden rounded-2xl border border-gray-200 shadow-sm bg-[#123B27]">
+            <div className="relative mt-6 aspect-[16/9] sm:aspect-[21/10] w-full overflow-hidden rounded-2xl border border-gray-200 shadow-sm bg-[#6B3113]">
               <SafeImage
                 src={post.image}
                 alt={post.imageAlt || post.title}
@@ -204,16 +204,16 @@ export default async function Post({ params }: { params: { slug: string } }) {
               />
 
               {/* Bottom Article CTA Card — admin-editable per post (PostForm → "Ready to book?" callout) */}
-              <div className="mt-12 flex flex-col items-center justify-between gap-5 rounded-2xl bg-[#123B27] p-6 text-center text-white sm:flex-row sm:text-left shadow-md border border-[#0D2E1E]">
+              <div className="mt-12 flex flex-col items-center justify-between gap-5 rounded-2xl bg-[#6B3113] p-6 text-center text-white sm:flex-row sm:text-left shadow-md border border-[#4E240D]">
                 <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/10 text-[#D6A33A] border border-white/15 shadow-sm">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/10 text-[#C98A22] border border-white/15 shadow-sm">
                     <TicketIcon className="h-6 w-6" />
                   </div>
                   <div>
                     <p className="font-serif text-base font-bold text-white">
                       {post.ctaHeading}
                     </p>
-                    <p className="mt-0.5 text-xs text-[#DDE5D8]">
+                    <p className="mt-0.5 text-xs text-[#F1E1C4]">
                       {post.ctaBody}
                     </p>
                   </div>
@@ -221,7 +221,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
 
                 <a
                   href={post.ctaButtonHref}
-                  className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-[#D6A33A] px-5 py-2.5 text-xs font-bold text-white shadow-sm transition hover:bg-[#B3841F] hover:scale-[1.02]"
+                  className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-[#C98A22] px-5 py-2.5 text-xs font-bold text-white shadow-sm transition hover:bg-[#A66E17] hover:scale-[1.02]"
                 >
                   {post.ctaButtonText}
                 </a>

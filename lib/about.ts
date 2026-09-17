@@ -19,35 +19,35 @@ export interface AboutPageContent {
 
 const DEFAULT_ABOUT: AboutPageContent = {
   heroEyebrow: "About Us",
-  heroHeading: "Your Trusted Guide to Pena Palace Tickets & Sintra Visits",
+  heroHeading: "Your Trusted Guide to Versailles Palace Tickets & Paris Day Trips",
   heroSubheading:
-    "We help travelers navigate Pena Palace ticket options, secure guaranteed timed-entry reservations, avoid sold-out slots, and experience Sintra's Romanticist masterpiece with licensed local guides.",
-  heroImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Image%20of%20Pena%20Palace%2C%20Sintra%2C%20Portugal.jpg",
-  heroImageAlt: "Pena Palace's colorful towers overlooking the Sintra hills at golden hour",
-  content: `<h2>Why We Created Pena Palace Tickets</h2>
-<p>Visiting Pena Palace is a bucket-list dream for millions of travelers, but the ticket booking process can be confusing. Between limited timed-entry slots, multiple ticket tiers (Park + Palace vs Park Only), and long queues at the box office in peak season, finding the right ticket shouldn't be difficult.</p>
-<p>Pena Palace Tickets is an independent travel portal dedicated to providing clear, transparent comparisons of official fast-track tickets, guaranteed timed-entry access, and licensed guide-led tours in partnership with verified Portuguese providers.</p>
-<h2>How We Curate Sintra Tours & Tickets</h2>
+    "We help travelers navigate Versailles Palace ticket options, secure guaranteed timed-entry reservations, avoid sold-out slots, and experience Louis XIV's Hall of Mirrors with licensed local guides.",
+  heroImage: "/images/versailles-hero.jpg",
+  heroImageAlt: "The golden gates and gilded facade of the Palace of Versailles at golden hour",
+  content: `<h2>Why We Created Versailles Palace Tickets</h2>
+<p>Visiting the Palace of Versailles is a bucket-list dream for millions of travelers, but the ticket booking process can be confusing. Between limited timed-entry slots, multiple ticket tiers (Palace vs Estate of Trianon), and long queues at the box office in peak season, finding the right ticket shouldn't be difficult.</p>
+<p>Versailles Palace Tickets is an independent travel portal dedicated to providing clear, transparent comparisons of official fast-track tickets, guaranteed timed-entry access, and licensed guide-led tours in partnership with verified French providers.</p>
+<h2>How We Curate Versailles Tours & Tickets</h2>
 <p>Every ticket and guided experience featured on our site meets rigorous quality, reliability, and security standards.</p>
 <ul>
-<li><strong>Guaranteed Timed Palace Entry</strong> — Every pre-booked ticket comes with an official timed reservation to explore the Palace interior without sold-out risk.</li>
-<li><strong>Licensed Local Guides</strong> — Our featured guided tours are led by certified Portuguese guides with exceptional traveler ratings.</li>
+<li><strong>Guaranteed Timed Palace Entry</strong> — Every pre-booked ticket comes with an official timed reservation to explore the Hall of Mirrors and State Apartments without sold-out risk.</li>
+<li><strong>Licensed Local Guides</strong> — Our featured guided tours are led by certified French guides with exceptional traveler ratings.</li>
 <li><strong>100% Free 24h Cancellation</strong> — Transparent pricing with flexible 100% free cancellation up to 24 hours before your scheduled entry time.</li>
-<li><strong>Complete Park & Palace Access</strong> — Tickets covering the Palace interior, Pena Park's gardens, and the Chalet of the Countess d'Edla.</li>
+<li><strong>Complete Palace & Estate Access</strong> — Tickets covering the main Palace interior, the Gardens of Versailles, and the Estate of Trianon.</li>
 </ul>
 <h2>Affiliate Transparency</h2>
-<p>When you book Pena Palace tickets or tours through links on our site, we may receive an affiliate commission at no extra cost to you. This enables us to maintain up-to-date, independent travel guides and pricing data for global visitors.</p>
-<p>Have questions about visiting Pena Palace? Get in touch with our team on our <a href="/contact">contact page</a>.</p>`,
-  metaTitle: "About Us | Pena Palace Tickets & Sintra Visitor Guide",
+<p>When you book Versailles Palace tickets or tours through links on our site, we may receive an affiliate commission at no extra cost to you. This enables us to maintain up-to-date, independent travel guides and pricing data for global visitors.</p>
+<p>Have questions about visiting Versailles? Get in touch with our team on our <a href="/contact">contact page</a>.</p>`,
+  metaTitle: "About Us | Versailles Palace Tickets & Paris Visitor Guide",
   metaDescription:
-    "Learn about Pena Palace Tickets: our mission, curation standards, and independent guide to the best Pena Palace passes and Sintra day trips.",
+    "Learn about Versailles Palace Tickets: our mission, curation standards, and independent guide to the best Versailles passes and Paris day trips.",
   canonicalUrl: "",
   noIndex: false,
   noFollow: false,
-  ogTitle: "About Us | Pena Palace Tickets & Sintra Visitor Guide",
+  ogTitle: "About Us | Versailles Palace Tickets & Paris Visitor Guide",
   ogDescription:
-    "Learn about Pena Palace Tickets: our mission, curation standards, and independent guide to the best Pena Palace passes and Sintra day trips.",
-  ogImage: "https://commons.wikimedia.org/wiki/Special:FilePath/Image%20of%20Pena%20Palace%2C%20Sintra%2C%20Portugal.jpg",
+    "Learn about Versailles Palace Tickets: our mission, curation standards, and independent guide to the best Versailles passes and Paris day trips.",
+  ogImage: "/images/versailles-hero.jpg",
 };
 
 interface LegacyReason {
