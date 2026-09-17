@@ -1,0 +1,209 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 180" fill="none" width="100%" height="100%">
+  <defs>
+    <!-- Sky & Skyline Gradient -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E0F2FE" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#BAE6FD" stop-opacity="0.1" />
+    </linearGradient>
+
+    <!-- Tower Bridge & Big Ben Silhouette Gradient -->
+    <linearGradient id="skylineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#C7D7E8" />
+      <stop offset="100%" stop-color="#93B4D7" />
+    </linearGradient>
+
+    <!-- River Wave Gradients -->
+    <linearGradient id="thamesWave1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="50%" stop-color="#1E96E0" />
+      <stop offset="100%" stop-color="#0369A1" />
+    </linearGradient>
+    <linearGradient id="thamesWave2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="60%" stop-color="#60A5FA" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+    <linearGradient id="thamesWaveDeep" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0B2545" />
+      <stop offset="50%" stop-color="#1E3A5F" />
+      <stop offset="100%" stop-color="#0B2545" />
+    </linearGradient>
+
+    <!-- Vessel Hull & Details -->
+    <linearGradient id="hullNavy" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#163860" />
+      <stop offset="100%" stop-color="#0B2545" />
+    </linearGradient>
+    <linearGradient id="goldStripe" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B" />
+      <stop offset="50%" stop-color="#FBBF24" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+    <linearGradient id="glassCyan" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F0F9FF" />
+      <stop offset="50%" stop-color="#BAE6FD" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+  </defs>
+
+  <!-- BACKGROUND: Iconic London Skyline Silhouette (Big Ben + Tower Bridge) -->
+  <g opacity="0.45">
+    <!-- Big Ben / Elizabeth Tower (Far Left) -->
+    <path d="M42,120 L42,42 L48,34 L48,22 L52,14 L53,6 L54,14 L58,22 L58,34 L64,42 L64,120 Z" fill="url(#skylineGrad)" />
+    <!-- Clock Face -->
+    <circle cx="53" cy="38" r="4.5" fill="#FFFFFF" opacity="0.8" />
+    <circle cx="53" cy="38" r="1.2" fill="#0B2545" />
+    <!-- Spire lines -->
+    <line x1="53" y1="6" x2="53" y2="2" stroke="#64748B" stroke-width="1.2" stroke-linecap="round" />
+
+    <!-- Parliament Roof / Gables -->
+    <path d="M64,68 L76,56 L88,68 L104,54 L120,68 L120,120 L64,120 Z" fill="url(#skylineGrad)" />
+
+    <!-- London Eye Rim Outline (Center Left) -->
+    <circle cx="165" cy="55" r="38" stroke="url(#skylineGrad)" stroke-width="2.5" fill="none" opacity="0.7" />
+    <circle cx="165" cy="55" r="4" fill="url(#skylineGrad)" />
+    <!-- Eye Spokes & Pods -->
+    <line x1="165" y1="17" x2="165" y2="93" stroke="url(#skylineGrad)" stroke-width="1.2" />
+    <line x1="127" y1="55" x2="203" y2="55" stroke="url(#skylineGrad)" stroke-width="1.2" />
+    <line x1="138" y1="28" x2="192" y2="82" stroke="url(#skylineGrad)" stroke-width="1.2" />
+    <line x1="138" y1="82" x2="192" y2="28" stroke="url(#skylineGrad)" stroke-width="1.2" />
+    <!-- Eye Support A-Frame Legs -->
+    <line x1="165" y1="55" x2="148" y2="120" stroke="url(#skylineGrad)" stroke-width="2.2" />
+    <line x1="165" y1="55" x2="182" y2="120" stroke="url(#skylineGrad)" stroke-width="2.2" />
+
+    <!-- Tower Bridge North Tower (Center Right) -->
+    <g transform="translate(260, 16)">
+      <!-- Left Tower Gothic Pinnacles -->
+      <path d="M0,105 L0,32 L6,24 L6,14 L10,8 L10,2 L12,8 L16,14 L16,24 L22,32 L22,105 Z" fill="url(#skylineGrad)" />
+      <!-- Left Tower Center Roof -->
+      <path d="M6,34 L16,34 L28,26 L40,34 L50,34 L50,105 L6,105 Z" fill="url(#skylineGrad)" />
+      <!-- Left Tower Right Pinnacle -->
+      <path d="M34,32 L40,24 L40,14 L44,8 L44,2 L46,8 L50,14 L50,24 L56,32 L56,105 Z" fill="url(#skylineGrad)" />
+      <!-- Arch Window Cutouts in Tower -->
+      <path d="M18,48 C18,42 38,42 38,48 L38,62 L18,62 Z" fill="#FFFFFF" opacity="0.6" />
+      <path d="M22,72 C22,68 34,68 34,72 L34,84 L22,84 Z" fill="#FFFFFF" opacity="0.6" />
+    </g>
+
+    <!-- Tower Bridge High-Level Walkways -->
+    <path d="M316,38 L430,38 L430,44 L316,44 Z" fill="url(#skylineGrad)" />
+    <path d="M316,50 L430,50 L430,54 L316,54 Z" fill="url(#skylineGrad)" />
+
+    <!-- Tower Bridge South Tower (Right) -->
+    <g transform="translate(430, 16)">
+      <path d="M0,105 L0,32 L6,24 L6,14 L10,8 L10,2 L12,8 L16,14 L16,24 L22,32 L22,105 Z" fill="url(#skylineGrad)" />
+      <path d="M6,34 L16,34 L28,26 L40,34 L50,34 L50,105 L6,105 Z" fill="url(#skylineGrad)" />
+      <path d="M34,32 L40,24 L40,14 L44,8 L44,2 L46,8 L50,14 L50,24 L56,32 L56,105 Z" fill="url(#skylineGrad)" />
+      <path d="M18,48 C18,42 38,42 38,48 L38,62 L18,62 Z" fill="#FFFFFF" opacity="0.6" />
+      <path d="M22,72 C22,68 34,68 34,72 L34,84 L22,84 Z" fill="#FFFFFF" opacity="0.6" />
+    </g>
+
+    <!-- Suspension Cables to Shore -->
+    <path d="M260,48 Q210,54 185,115" stroke="url(#skylineGrad)" stroke-width="2.5" fill="none" />
+    <path d="M486,48 Q515,54 535,115" stroke="url(#skylineGrad)" stroke-width="2.5" fill="none" />
+
+    <!-- Flying Seagulls in Sky -->
+    <path d="M105,24 Q112,18 119,24 Q126,18 133,24" stroke="#64748B" stroke-width="1.8" fill="none" stroke-linecap="round" />
+    <path d="M136,34 Q141,29 146,34 Q151,29 156,34" stroke="#64748B" stroke-width="1.4" fill="none" stroke-linecap="round" />
+  </g>
+
+  <!-- FOREGROUND: Modern Two-Tier Thames Double-Decker Cruise Vessel -->
+  <g transform="translate(0, 8)">
+    <!-- Radar Mast / Aerial on Helm -->
+    <line x1="168" y1="56" x2="168" y2="44" stroke="#0B2545" stroke-width="2.5" stroke-linecap="round" />
+    <circle cx="168" cy="44" r="2.5" fill="#F59E0B" />
+    <line x1="162" y1="48" x2="174" y2="48" stroke="#0B2545" stroke-width="2" stroke-linecap="round" />
+
+    <!-- Flagpole at Stern (Right) with British Red Ensign Flag -->
+    <g transform="translate(470, 36)">
+      <line x1="8" y1="55" x2="24" y2="2" stroke="#0B2545" stroke-width="2.8" stroke-linecap="round" />
+      <circle cx="24" cy="2" r="2.5" fill="#F59E0B" />
+
+      <!-- Fluttering Flag -->
+      <g transform="translate(24, 4) rotate(8)">
+        <path d="M0,0 Q20,-4 40,2 Q36,15 40,26 Q20,20 0,24 Z" fill="#DC2626" />
+        <path d="M0,0 Q10,-2 20,1 L20,13 Q10,11 0,13 Z" fill="#00247D" />
+        <path d="M0,0 L20,13" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+        <path d="M20,0 L0,13" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+        <path d="M0,0 L20,13" stroke="#CF142B" stroke-width="1" stroke-linecap="round" />
+        <path d="M20,0 L0,13" stroke="#CF142B" stroke-width="1" stroke-linecap="round" />
+        <path d="M10,0 L10,13" stroke="#FFFFFF" stroke-width="3" />
+        <path d="M0,6.5 L20,6.5" stroke="#FFFFFF" stroke-width="3" />
+        <path d="M10,0 L10,13" stroke="#CF142B" stroke-width="1.8" />
+        <path d="M0,6.5 L20,6.5" stroke="#CF142B" stroke-width="1.8" />
+      </g>
+    </g>
+
+    <!-- UPPER DECK: Open Observation Sun-Deck with Safety Railings & Canopy -->
+    <!-- Open Deck Canopy / Sun Awning -->
+    <path d="M220,54 L440,54 C450,54 455,57 458,62 L212,62 C215,57 218,54 220,54 Z" fill="#0B2545" />
+    <path d="M224,56 L436,56 L434,60 L226,60 Z" fill="#F59E0B" />
+
+    <!-- Canopy Support Posts -->
+    <line x1="230" y1="62" x2="230" y2="76" stroke="#0B2545" stroke-width="2" />
+    <line x1="280" y1="62" x2="280" y2="76" stroke="#0B2545" stroke-width="2" />
+    <line x1="330" y1="62" x2="330" y2="76" stroke="#0B2545" stroke-width="2" />
+    <line x1="380" y1="62" x2="380" y2="76" stroke="#0B2545" stroke-width="2" />
+    <line x1="430" y1="62" x2="430" y2="76" stroke="#0B2545" stroke-width="2" />
+
+    <!-- Upper Deck Safety Guard Railing -->
+    <line x1="192" y1="68" x2="466" y2="68" stroke="#64748B" stroke-width="1.6" />
+    <line x1="192" y1="74" x2="468" y2="74" stroke="#0B2545" stroke-width="2" />
+
+    <!-- Wheelhouse / Captain's Helm Bridge (Forward Upper Deck) -->
+    <path d="M142,76 C146,58 178,54 195,54 L215,54 L215,76 Z" fill="#FFFFFF" stroke="#0B2545" stroke-width="2.6" stroke-linejoin="round" />
+    <!-- Helm Panoramic Windows -->
+    <path d="M148,74 C152,60 176,58 190,58 L208,58 L208,74 Z" fill="url(#glassCyan)" stroke="#0B2545" stroke-width="1.6" />
+    <line x1="178" y1="58" x2="178" y2="74" stroke="#0B2545" stroke-width="2" />
+
+    <!-- Mid-Deck Floor / White Superstructure Band -->
+    <path d="M102,76 L476,76 C482,76 486,81 482,85 L92,85 C88,81 94,76 102,76 Z" fill="#FFFFFF" stroke="#0B2545" stroke-width="2.6" />
+
+    <!-- LOWER DECK: Panoramic Passenger Saloon (Glass Windows) -->
+    <path d="M88,85 L482,85 L474,99 L82,99 Z" fill="#FFFFFF" stroke="#0B2545" stroke-width="2.4" />
+    <!-- Individual Panoramic Tinted Windows -->
+    <g fill="url(#glassCyan)" stroke="#0B2545" stroke-width="1.8">
+      <path d="M96,87 C100,87 122,87 124,87 L120,97 L92,97 Z" rx="2" />
+      <rect x="132" y="87" width="36" height="10" rx="3" />
+      <rect x="176" y="87" width="36" height="10" rx="3" />
+      <rect x="220" y="87" width="36" height="10" rx="3" />
+      <rect x="264" y="87" width="36" height="10" rx="3" />
+      <rect x="308" y="87" width="36" height="10" rx="3" />
+      <rect x="352" y="87" width="36" height="10" rx="3" />
+      <rect x="396" y="87" width="36" height="10" rx="3" />
+      <rect x="440" y="87" width="28" height="10" rx="3" />
+    </g>
+
+    <!-- Window Light Reflections -->
+    <line x1="136" y1="89" x2="164" y2="89" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" opacity="0.8" />
+    <line x1="224" y1="89" x2="252" y2="89" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" opacity="0.8" />
+    <line x1="312" y1="89" x2="340" y2="89" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" opacity="0.8" />
+
+    <!-- MAIN NAVY HULL (Deep Royal Blue London Cruiser) -->
+    <path d="M36,88 C68,90 102,96 130,98 L482,98 C496,112 472,126 440,128 L85,128 C52,118 38,104 36,88 Z" fill="url(#hullNavy)" stroke="#0B2545" stroke-width="3" stroke-linejoin="round" />
+
+    <!-- London Red Racing Stripe -->
+    <path d="M42,94 C72,96 104,101 130,102 L480,102 L476,108 L130,108 C102,107 70,102 40,99 Z" fill="#DC2626" />
+
+    <!-- British Warm Gold Accent Pinstripe -->
+    <path d="M46,104 C74,106 106,109 130,110 L470,110 L466,114 L130,114 C104,113 72,110 44,108 Z" fill="url(#goldStripe)" />
+
+    <!-- Bow Anchor & Navigation Light -->
+    <circle cx="68" cy="116" r="3.6" fill="#E2E8F0" stroke="#0B2545" stroke-width="1.8" />
+    <circle cx="68" cy="116" r="1.6" fill="#38BDF8" />
+  </g>
+
+  <!-- RHYTHMIC RIVER THAMES WAVES (Flowing Multi-layered Vector Swooshes) -->
+  <!-- Layer 1: Dark Navy Depth Wave -->
+  <path d="M12,128 C75,116 135,138 200,126 C265,114 330,136 395,124 C460,112 505,130 534,120 C495,142 440,128 375,142 C310,154 245,132 180,144 C115,154 55,138 12,128 Z" fill="url(#thamesWaveDeep)" />
+
+  <!-- Layer 2: Main Vivid Blue River Wave -->
+  <path d="M8,136 C70,122 135,146 205,132 C275,118 345,144 415,130 C480,118 522,136 538,128 C495,154 435,138 365,154 C295,168 225,144 155,158 C95,168 45,150 8,136 Z" fill="url(#thamesWave1)" />
+
+  <!-- Layer 3: Foreground Bright Sky-Blue Foam Crest -->
+  <path d="M68,148 C135,136 195,156 265,144 C335,132 405,154 470,142 C518,132 534,140 534,140 C485,162 425,150 355,164 C285,176 215,154 145,166 C102,172 72,160 68,148 Z" fill="url(#thamesWave2)" opacity="0.95" />
+
+  <!-- Foam Spray Accents -->
+  <path d="M25,132 C40,129 55,134 70,131" stroke="#BAE6FD" stroke-width="2.6" stroke-linecap="round" />
+  <path d="M215,138 C235,135 252,141 270,137" stroke="#BAE6FD" stroke-width="2.6" stroke-linecap="round" />
+  <path d="M395,134 C415,131 432,137 450,133" stroke="#BAE6FD" stroke-width="2.6" stroke-linecap="round" />
+</svg>

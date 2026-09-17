@@ -224,7 +224,7 @@ export const DEFAULT_HEADER: HeaderContent = {
   logoImage: "",
   logoAlt: "Thames River Cruises",
   logoLine1: "Thames River",
-  logoLine2: "— CRUISES —",
+  logoLine2: "Cruise Tours",
   bookNowText: "BOOK CRUISE",
   navLinks: [
     { label: "Home", href: "/" },

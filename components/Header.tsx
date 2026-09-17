@@ -21,10 +21,10 @@ export default async function Header() {
     <StickyHeader>
       <div className="relative z-10 mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-8">
         <Logo
-          logoImage={header.logoImage}
-          logoAlt={header.logoAlt || "Thames River Cruises"}
-          line1={header.logoLine1 || "THAMES RIVER"}
-          line2={header.logoLine2 || "— TICKETS —"}
+          src={header.logoImage}
+          alt={header.logoAlt || "Thames River Cruises"}
+          line1={header.logoLine1 || "Thames River"}
+          line2={header.logoLine2 || "Cruise Tours"}
         />
 
         <HeaderNav links={navLinks} />

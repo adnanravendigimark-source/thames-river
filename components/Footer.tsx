@@ -12,9 +12,10 @@ export default async function Footer() {
           {/* Brand & Tagline — admin-editable (Footer tagline) */}
           <div className="lg:col-span-4 space-y-4">
             <Logo
-              line1={header.logoLine1 || "THAMES RIVER"}
-              line2={header.logoLine2 || "— TICKETS —"}
+              variant="stacked"
               theme="dark"
+              line1={header.logoLine1 || "Thames River"}
+              line2={header.logoLine2 || "Cruise Tours"}
             />
             <div
               className="rich-content rich-content-invert max-w-sm text-xs text-[#E1EBF5]/90 leading-relaxed pt-1"
