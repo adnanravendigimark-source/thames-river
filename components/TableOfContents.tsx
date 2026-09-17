@@ -11,20 +11,20 @@ export default function TableOfContents({
   if (sections.length < 2) return null;
 
   return (
-    <div className="rounded-2xl border border-[#F3E5C8] bg-white p-5 shadow-sm">
-      <p className="font-serif text-xs font-bold uppercase tracking-wider text-[#6B3113]">
+    <div className="rounded-2xl border border-[#E7F0F9] bg-white p-5 shadow-sm">
+      <p className="font-serif text-xs font-bold uppercase tracking-wider text-[#0B2545]">
         {label}
       </p>
-      <ol className="mt-3.5 space-y-2 border-l-2 border-[#F3E5C8] pl-3.5 text-xs">
+      <ol className="mt-3.5 space-y-2 border-l-2 border-[#E7F0F9] pl-3.5 text-xs">
         {sections.map((item, i) => {
           const cleanText = item.text.replace(/^\d+\.\s*/, "");
           return (
             <li key={item.id}>
               <a
                 href={`#${item.id}`}
-                className="flex items-baseline gap-1.5 font-medium text-[#2B221D]/80 transition hover:text-[#C98A22]"
+                className="flex items-baseline gap-1.5 font-medium text-[#1C2B3A]/80 transition hover:text-[#1E96E0]"
               >
-                <span aria-hidden="true" className="shrink-0 font-bold text-[#6B3113]">
+                <span aria-hidden="true" className="shrink-0 font-bold text-[#0B2545]">
                   {i + 1}.
                 </span>
                 <span className="leading-snug">{cleanText}</span>

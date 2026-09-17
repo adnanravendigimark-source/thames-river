@@ -30,16 +30,16 @@ export default async function PrivacyPolicyPage() {
       <Header />
       <main className="bg-white min-h-screen pt-28 sm:pt-32 pb-16 sm:pb-20">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <h1 className="font-serif text-3xl font-bold text-[#6B3113] sm:text-4xl">{policy.title}</h1>
+          <h1 className="font-serif text-3xl font-bold text-[#0B2545] sm:text-4xl">{policy.title}</h1>
           {policy.lastUpdated && (
-            <p className="mt-2 text-xs sm:text-sm text-[#2B221D]/60">{policy.lastUpdatedLabel}{policy.lastUpdated}</p>
+            <p className="mt-2 text-xs sm:text-sm text-[#1C2B3A]/60">{policy.lastUpdatedLabel}{policy.lastUpdated}</p>
           )}
 
-          <div className="mt-8 space-y-6 text-sm sm:text-base leading-relaxed text-[#2B221D]/85">
+          <div className="mt-8 space-y-6 text-sm sm:text-base leading-relaxed text-[#1C2B3A]/85">
             {policy.content.map((block, i) => (
               <div key={i}>
                 {block.type === "heading" && (
-                  <h2 className="font-serif text-lg sm:text-xl font-bold text-[#6B3113] mt-6 mb-2">{block.text}</h2>
+                  <h2 className="font-serif text-lg sm:text-xl font-bold text-[#0B2545] mt-6 mb-2">{block.text}</h2>
                 )}
                 {block.type === "paragraph" && (
                   <div className="rich-content max-w-none" dangerouslySetInnerHTML={{ __html: block.text || "" }} />
@@ -54,7 +54,7 @@ export default async function PrivacyPolicyPage() {
               </div>
             ))}
             {policy.content.length === 0 && (
-              <p className="text-[#2B221D]/60">{policy.emptyStateText}</p>
+              <p className="text-[#1C2B3A]/60">{policy.emptyStateText}</p>
             )}
           </div>
         </div>

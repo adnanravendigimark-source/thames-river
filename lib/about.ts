@@ -19,35 +19,35 @@ export interface AboutPageContent {
 
 const DEFAULT_ABOUT: AboutPageContent = {
   heroEyebrow: "About Us",
-  heroHeading: "Your Trusted Guide to Versailles Palace Tickets & Paris Day Trips",
+  heroHeading: "Your Trusted Guide to Thames River Cruise Tickets & London Day Trips",
   heroSubheading:
-    "We help travelers navigate Versailles Palace ticket options, secure guaranteed timed-entry reservations, avoid sold-out slots, and experience Louis XIV's Hall of Mirrors with licensed local guides.",
-  heroImage: "/images/versailles-hero.jpg",
-  heroImageAlt: "The golden gates and gilded facade of the Palace of Versailles at golden hour",
-  content: `<h2>Why We Created Versailles Palace Tickets</h2>
-<p>Visiting the Palace of Versailles is a bucket-list dream for millions of travelers, but the ticket booking process can be confusing. Between limited timed-entry slots, multiple ticket tiers (Palace vs Estate of Trianon), and long queues at the box office in peak season, finding the right ticket shouldn't be difficult.</p>
-<p>Versailles Palace Tickets is an independent travel portal dedicated to providing clear, transparent comparisons of official fast-track tickets, guaranteed timed-entry access, and licensed guide-led tours in partnership with verified French providers.</p>
-<h2>How We Curate Versailles Tours & Tickets</h2>
-<p>Every ticket and guided experience featured on our site meets rigorous quality, reliability, and security standards.</p>
+    "We help travelers navigate Thames River cruise options, secure guaranteed departure times, avoid sold-out sailings, and see Tower Bridge, the Houses of Parliament, and St Paul's Cathedral from the water with licensed local operators.",
+  heroImage: "/images/thames-hero.jpg",
+  heroImageAlt: "A Thames river cruise boat passing Tower Bridge at golden hour, London",
+  content: `<h2>Why We Created Thames River Cruises</h2>
+<p>A cruise along the Thames is one of the best ways to see London, but the booking process can be confusing. Between multiple departure piers, operators, and ticket tiers — sightseeing, evening, and afternoon tea cruises — finding the right ticket shouldn't be difficult.</p>
+<p>Thames River Cruises is an independent travel portal dedicated to providing clear, transparent comparisons of official river cruise tickets, guaranteed departure times, and guided sightseeing tours in partnership with verified London-based operators.</p>
+<h2>How We Curate Thames Cruises & Tickets</h2>
+<p>Every cruise and guided experience featured on our site meets rigorous quality, reliability, and safety standards.</p>
 <ul>
-<li><strong>Guaranteed Timed Palace Entry</strong> — Every pre-booked ticket comes with an official timed reservation to explore the Hall of Mirrors and State Apartments without sold-out risk.</li>
-<li><strong>Licensed Local Guides</strong> — Our featured guided tours are led by certified French guides with exceptional traveler ratings.</li>
-<li><strong>100% Free 24h Cancellation</strong> — Transparent pricing with flexible 100% free cancellation up to 24 hours before your scheduled entry time.</li>
-<li><strong>Complete Palace & Estate Access</strong> — Tickets covering the main Palace interior, the Gardens of Versailles, and the Estate of Trianon.</li>
+<li><strong>Guaranteed Departure Times</strong> — Every pre-booked ticket comes with a confirmed sailing time from Westminster, Tower, or Greenwich pier.</li>
+<li><strong>Licensed River Operators</strong> — Our featured cruises are run by licensed Thames operators with exceptional traveler ratings.</li>
+<li><strong>100% Free 24h Cancellation</strong> — Transparent pricing with flexible 100% free cancellation up to 24 hours before your scheduled departure.</li>
+<li><strong>Full River Access</strong> — Tickets covering sightseeing cruises, evening cruises, afternoon tea cruises, and Greenwich round-trips.</li>
 </ul>
 <h2>Affiliate Transparency</h2>
-<p>When you book Versailles Palace tickets or tours through links on our site, we may receive an affiliate commission at no extra cost to you. This enables us to maintain up-to-date, independent travel guides and pricing data for global visitors.</p>
-<p>Have questions about visiting Versailles? Get in touch with our team on our <a href="/contact">contact page</a>.</p>`,
-  metaTitle: "About Us | Versailles Palace Tickets & Paris Visitor Guide",
+<p>When you book Thames River cruise tickets or tours through links on our site, we may receive an affiliate commission at no extra cost to you. This enables us to maintain up-to-date, independent travel guides and pricing data for global visitors.</p>
+<p>Have questions about cruising the Thames? Get in touch with our team on our <a href="/contact">contact page</a>.</p>`,
+  metaTitle: "About Us | Thames River Cruises & London Visitor Guide",
   metaDescription:
-    "Learn about Versailles Palace Tickets: our mission, curation standards, and independent guide to the best Versailles passes and Paris day trips.",
+    "Learn about Thames River Cruises: our mission, curation standards, and independent guide to the best Thames cruise tickets and London day trips.",
   canonicalUrl: "",
   noIndex: false,
   noFollow: false,
-  ogTitle: "About Us | Versailles Palace Tickets & Paris Visitor Guide",
+  ogTitle: "About Us | Thames River Cruises & London Visitor Guide",
   ogDescription:
-    "Learn about Versailles Palace Tickets: our mission, curation standards, and independent guide to the best Versailles passes and Paris day trips.",
-  ogImage: "/images/versailles-hero.jpg",
+    "Learn about Thames River Cruises: our mission, curation standards, and independent guide to the best Thames cruise tickets and London day trips.",
+  ogImage: "/images/thames-hero.jpg",
 };
 
 interface LegacyReason {

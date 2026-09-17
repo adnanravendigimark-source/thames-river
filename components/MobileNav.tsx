@@ -21,7 +21,7 @@ export default function MobileNav({
         type="button"
         onClick={() => setOpen(!open)}
         aria-label="Toggle navigation menu"
-        className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#F3E5C8] bg-[#FBF3E4] text-[#6B3113] transition hover:bg-[#F3E5C8]/40"
+        className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#E7F0F9] bg-[#F4F8FC] text-[#0B2545] transition hover:bg-[#E7F0F9]/40"
       >
         {open ? (
           <span className="text-xl font-bold">✕</span>
@@ -31,14 +31,14 @@ export default function MobileNav({
       </button>
 
       {open && (
-        <div className="absolute inset-x-0 top-20 z-50 border-b border-[#F3E5C8] bg-[#FBF3E4] p-6 shadow-2xl animate-in slide-in-from-top-2">
+        <div className="absolute inset-x-0 top-20 z-50 border-b border-[#E7F0F9] bg-[#F4F8FC] p-6 shadow-2xl animate-in slide-in-from-top-2">
           <nav className="flex flex-col gap-4">
             {links.map((link) => (
               <Link
                 key={link.href + link.label}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="text-base font-bold text-[#2B221D] transition hover:text-[#6B3113]"
+                className="text-base font-bold text-[#1C2B3A] transition hover:text-[#0B2545]"
               >
                 {link.label}
               </Link>
@@ -46,12 +46,12 @@ export default function MobileNav({
             <a
               href={ctaHref}
               onClick={() => setOpen(false)}
-              className="mt-2 flex items-center justify-center gap-2 rounded-lg bg-[#6B3113] py-3 text-center text-xs font-bold uppercase tracking-wider text-white shadow-md transition hover:bg-[#4E240D]"
+              className="mt-2 flex items-center justify-center gap-2 rounded-lg bg-[#0B2545] py-3 text-center text-xs font-bold uppercase tracking-wider text-white shadow-md transition hover:bg-[#081B34]"
             >
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="#C98A22"
+                stroke="#1E96E0"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"

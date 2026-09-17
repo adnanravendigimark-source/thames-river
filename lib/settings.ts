@@ -12,9 +12,9 @@ export interface BlogSeoSettings {
 }
 
 const DEFAULT_SETTINGS: BlogSeoSettings = {
-  metaTitle: "Versailles Palace Blog | Tickets, Tours, Prices & Tips (2026)",
+  metaTitle: "Thames River Cruise Blog | Tickets, Tours, Prices & Tips (2026)",
   metaDescription:
-    "Comprehensive travel and visitor guides for Versailles Palace tickets — skip-the-line palace passes, guided tours, Paris day-trip planning, and combined attraction passes.",
+    "Comprehensive travel and visitor guides for Thames River cruise tickets — sightseeing cruises, evening cruises, London day-trip planning, and combined attraction passes.",
   canonicalUrl: "",
   noIndex: false,
   noFollow: false,

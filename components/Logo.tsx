@@ -3,9 +3,9 @@ import Image from "next/image";
 
 export default function Logo({
   logoImage,
-  logoAlt = "Versailles Palace Tickets",
-  line1 = "VERSAILLES PALACE",
-  line2 = "— TICKETS —",
+  logoAlt = "Thames River Cruises",
+  line1 = "THAMES RIVER",
+  line2 = "— CRUISES —",
   theme = "light",
   className = "",
 }: {
@@ -34,72 +34,61 @@ export default function Logo({
         </span>
       ) : (
         <span className="relative flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center transition-transform duration-300 group-hover:scale-105">
-          {/* Detailed Golden Versailles Palace Facade Silhouette / Line Art */}
+          {/* Tower Bridge / River Thames Silhouette Line Art */}
           <svg
             viewBox="0 0 48 48"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             className="h-full w-full"
           >
-            {/* Castle silhouette in Palace Gold */}
-            <path
-              d="M4 42h40M7 42V31h4v11M11 31h4V22h4v20M19 22h6v20M25 24h4v18M29 27h6v15M35 30h6v12"
-              stroke="#C98A22"
-              strokeWidth="1.5"
-              strokeLinejoin="round"
-            />
-            {/* Left High Spire & Clock Tower */}
-            <path
-              d="M9 31V16l4-6 4 6v15"
-              fill="#C98A22"
-              fillOpacity="0.2"
-              stroke="#C98A22"
-              strokeWidth="1.5"
-              strokeLinejoin="round"
-            />
-            <path d="M13 10V5M11 7h4" stroke="#C98A22" strokeWidth="1.2" strokeLinecap="round" />
-            <circle cx="13" cy="19" r="2" fill="#C98A22" />
-            
-            {/* Central Onion Dome / Minaret */}
-            <path
-              d="M21 22V14c0-3 3-6 4-8 1 2 4 5 4 8v8"
-              fill="#C98A22"
-              fillOpacity="0.3"
-              stroke="#C98A22"
-              strokeWidth="1.5"
-              strokeLinejoin="round"
-            />
-            <line x1="25" y1="4" x2="25" y2="6" stroke="#C98A22" strokeWidth="1.5" strokeLinecap="round" />
-            <line x1="23.5" y1="5" x2="26.5" y2="5" stroke="#C98A22" strokeWidth="1.2" strokeLinecap="round" />
+            {/* River Thames waterline */}
+            <path d="M2 42h44" stroke="#1E96E0" strokeWidth="1.6" strokeLinecap="round" />
+            <path d="M6 45q3-2 6 0t6 0t6 0t6 0t6 0t6 0" stroke="#1E96E0" strokeWidth="1.1" strokeLinecap="round" opacity="0.6" />
 
-            {/* Right Tower & Battlements */}
+            {/* Left tower */}
             <path
-              d="M31 27V15l3-3 3 3v12"
-              fill="#C98A22"
-              fillOpacity="0.25"
-              stroke="#C98A22"
+              d="M12 42V9l5-5 5 5v33"
+              fill="#1E96E0"
+              fillOpacity="0.18"
+              stroke="#1E96E0"
               strokeWidth="1.5"
               strokeLinejoin="round"
             />
-            <path d="M34 12V8M32.5 9.5h3" stroke="#C98A22" strokeWidth="1.2" strokeLinecap="round" />
+            {/* Right tower */}
+            <path
+              d="M26 42V9l5-5 5 5v33"
+              fill="#1E96E0"
+              fillOpacity="0.18"
+              stroke="#1E96E0"
+              strokeWidth="1.5"
+              strokeLinejoin="round"
+            />
 
-            {/* Castle Archways & Windows */}
-            <path d="M11 37a2 2 0 0 1 4 0v5h-4v-5z" fill="#C98A22" />
-            <path d="M21 34a3 3 0 0 1 6 0v8h-6v-8z" fill="#C98A22" />
-            <path d="M31 36a2 2 0 0 1 4 0v6h-4v-6z" fill="#C98A22" />
+            {/* High-level walkway */}
+            <rect x="17" y="14" width="14" height="3" fill="#1E96E0" fillOpacity="0.35" stroke="#1E96E0" strokeWidth="1.2" />
+
+            {/* Bascule bridge deck */}
+            <rect x="17" y="31" width="14" height="3" fill="#1E96E0" stroke="#1E96E0" strokeWidth="1.2" />
+
+            {/* Suspension cable accents */}
+            <path d="M14 14L17 31M34 14L31 31" stroke="#1E96E0" strokeWidth="1" strokeLinecap="round" />
+
+            {/* Tower pinnacles */}
+            <circle cx="17" cy="4" r="1.3" fill="#1E96E0" />
+            <circle cx="31" cy="4" r="1.3" fill="#1E96E0" />
           </svg>
         </span>
       )}
       <div className="flex flex-col">
         <span
           className={`font-serif tracking-[0.08em] text-[1.15rem] sm:text-[1.28rem] font-bold uppercase transition-colors leading-none ${
-            isDark ? "text-white group-hover:text-[#C98A22]" : "text-[#6B3113] group-hover:text-[#8A3F19]"
+            isDark ? "text-white group-hover:text-[#1E96E0]" : "text-[#0B2545] group-hover:text-[#1B4373]"
           }`}
         >
           {line1}
         </span>
         <span
-          className="text-[9px] sm:text-[10px] font-bold tracking-[0.28em] uppercase text-[#C98A22] mt-1 text-center sm:text-left"
+          className="text-[9px] sm:text-[10px] font-bold tracking-[0.28em] uppercase text-[#1E96E0] mt-1 text-center sm:text-left"
         >
           {line2}
         </span>

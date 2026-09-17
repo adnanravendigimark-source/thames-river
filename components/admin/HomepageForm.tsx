@@ -46,7 +46,7 @@ const CONTENT_SECTIONS = [
   { id: "sec-hero", label: "Hero" },
   { id: "sec-tourgrid", label: "Tour Grid" },
   { id: "sec-why", label: "What You See" },
-  { id: "sec-tower", label: "Palace Towers & Terraces" },
+  { id: "sec-tower", label: "River Landmarks Spotlight" },
   { id: "sec-practical", label: "Practical Info" },
   { id: "sec-price", label: "Price Comparison" },
   { id: "sec-ctabanner", label: "Bottom CTA Banner" },
@@ -532,8 +532,8 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
 
           <SectionCard
             id="sec-tower"
-            title="Palace Towers & Terraces section"
-            description="A second, image-heavy spotlight on the palace's towers and terraces, right below “What You See”. Photos live on the Images tab."
+            title="River Landmarks Spotlight section"
+            description="A second, image-heavy spotlight on the river's landmarks, right below “What You See”. Photos live on the Images tab."
             open={!!openSections["sec-tower"]}
             onToggle={() => toggleSection("sec-tower")}
           >
@@ -587,7 +587,7 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
                 addLabel="+ Add row"
                 renderItem={(row, upd) => (
                   <div className="grid gap-2 sm:grid-cols-2">
-                    <input value={row.range} onChange={(e) => upd({ ...row, range: e.target.value })} placeholder="e.g. Versailles Palace" className={inputClass} />
+                    <input value={row.range} onChange={(e) => upd({ ...row, range: e.target.value })} placeholder="e.g. Thames River Cruise" className={inputClass} />
                     <input value={row.time} onChange={(e) => upd({ ...row, time: e.target.value })} placeholder="e.g. 8:15 AM – 7:30 PM" className={inputClass} />
                   </div>
                 )}
@@ -641,7 +641,7 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
               <Field label="Column 1" hint={'e.g. "Validity" — set per tour via its "Price table: Duration" field, or leave blank to use the tour\'s own Duration field.'}>
                 <input value={content.sections.price.column1Label} onChange={(e) => updatePrice({ column1Label: e.target.value })} className={inputClass} />
               </Field>
-              <Field label="Column 2" hint='e.g. "Palace Interior Access" — set per tour via its "Price table: Palace Interior Access" field.'>
+              <Field label="Column 2" hint='e.g. "Onboard Feature" — set per tour via its "Price table: Onboard Feature" field.'>
                 <input value={content.sections.price.column2Label} onChange={(e) => updatePrice({ column2Label: e.target.value })} className={inputClass} />
               </Field>
               <Field label="Column: best for" hint='e.g. "Best For"'>
@@ -985,7 +985,7 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
                 )}
               </div>
               <div className="bg-stone-50 p-3">
-                <p className="truncate text-xs uppercase tracking-wide text-stone-400">versaillespalacetickets.com</p>
+                <p className="truncate text-xs uppercase tracking-wide text-stone-400">thamesrivercruises.com</p>
                 <p className="mt-0.5 truncate text-sm font-semibold text-stone-900">{content.ogTitle || content.metaTitle || content.heroHeading}</p>
                 <p className="mt-0.5 line-clamp-2 text-xs text-stone-500">{(content.ogDescription || content.metaDescription || content.heroSubheading).replace(/<[^>]+>/g, "")}</p>
               </div>
@@ -1037,7 +1037,7 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
             </Field>
           </SectionCard>
 
-          <SectionCard title="Palace Towers & Terraces photos" description="The 2×2 photo grid in the Palace Towers & Terraces section.">
+          <SectionCard title="River Landmarks Spotlight photos" description="The 2×2 photo grid in the River Landmarks Spotlight section.">
             <RepeatableList<GalleryImage>
               items={content.sections.tower.images}
               onChange={(images) => updateTower({ images })}
@@ -1062,7 +1062,7 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
         <div className="space-y-5">
           <SectionCard title="Focus keyword" description="The main phrase you want the homepage to rank for. Purely a writing aid — nothing here is sent to Google.">
             <Field label="Focus keyword">
-              <input value={content.focusKeyword} onChange={(e) => update("focusKeyword", e.target.value)} className={inputClass} placeholder="e.g. Versailles Palace tickets" />
+              <input value={content.focusKeyword} onChange={(e) => update("focusKeyword", e.target.value)} className={inputClass} placeholder="e.g. Thames River Cruise tickets" />
             </Field>
             {focusChecklist && (
               <ul className="space-y-1.5 rounded-xl border border-stone-200 bg-stone-50 p-4 text-sm">

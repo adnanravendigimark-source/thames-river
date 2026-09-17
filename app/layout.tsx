@@ -21,7 +21,7 @@ const bodyFont = Plus_Jakarta_Sans({
   variable: "--font-body",
 });
 
-const DEFAULT_OG_IMAGE = `${SITE_URL}/images/versailles-hero.jpg`;
+const DEFAULT_OG_IMAGE = `${SITE_URL}/images/thames-hero.jpg`;
 
 // Google Analytics (GA4) measurement ID.
 const GA_MEASUREMENT_ID = "G-FLTLV5RF8S";
@@ -29,45 +29,45 @@ const GA_MEASUREMENT_ID = "G-FLTLV5RF8S";
 const touristAttractionJsonLd = {
   "@context": "https://schema.org",
   "@type": "TouristAttraction",
-  name: "Versailles Palace Tickets & Guided Tours",
+  name: "Thames River Cruise Tickets & Guided Tours",
   url: SITE_URL,
   description:
-    "Official & verified Palace of Versailles tickets with guaranteed skip-the-line entry, guided tours, and combined Paris day-trip options in Versailles, France.",
+    "Official & verified Thames River cruise tickets with guaranteed departure times, guided tours, and combined London day-trip options in London, England.",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Place d'Armes",
-    addressLocality: "Versailles",
-    postalCode: "78000",
-    addressCountry: "FR",
+    streetAddress: "Westminster Pier, Victoria Embankment",
+    addressLocality: "London",
+    postalCode: "SE1 2PP",
+    addressCountry: "GB",
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 48.8049,
-    longitude: 2.1204,
+    latitude: 51.5013,
+    longitude: -0.1244,
   },
   // Google's structured-data validator doesn't support aggregateRating on
   // TouristAttraction (it's only recognized on types like Product,
   // LocalBusiness, Recipe, Event, etc.) — it flagged this block as a
   // critical error on the Florence sibling site with the identical block.
-  // This site also doesn't operate the Palace of Versailles itself, so
-  // attaching a third-party review aggregate to it isn't appropriate
-  // structured data anyway. Removed rather than reattached elsewhere.
+  // This site also doesn't operate any Thames cruise itself, so attaching a
+  // third-party review aggregate to it isn't appropriate structured data
+  // anyway. Removed rather than reattached elsewhere.
 };
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Versailles Palace Tickets",
+  name: "Thames River Cruises",
   url: SITE_URL,
   logo: `${SITE_URL}/icon`,
   description:
-    "Independent Versailles travel resource dedicated to Palace of Versailles tickets, skip-the-line entry, and guided tour bookings.",
+    "Independent London travel resource dedicated to Thames River cruise tickets, guaranteed departure times, and guided tour bookings.",
 };
 
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Versailles Palace Tickets",
+  name: "Thames River Cruises",
   url: SITE_URL,
 };
 
@@ -77,12 +77,12 @@ export function generateMetadata(): Metadata {
   return {
     metadataBase: new URL(SITE_URL),
     title: {
-      default: "Versailles Palace Tickets | Skip-the-Line Entry 2026",
-      template: "%s | Versailles Palace Tickets",
+      default: "Thames River Cruise Tickets | Sightseeing & Evening Cruises 2026",
+      template: "%s | Thames River Cruises",
     },
     description:
-      "Book official Palace of Versailles tickets with skip-the-line entry. Bypass long lines with verified timed-entry passes to France's grandest royal château.",
-    keywords: ["Versailles Palace Tickets", "Versailles Tickets", "Versailles Skip the Line", "Palace of Versailles Guided Tour"],
+      "Book official Thames River cruise tickets with a guaranteed departure time. Compare sightseeing, evening, and afternoon tea cruises on London's iconic river.",
+    keywords: ["Thames River Cruise Tickets", "Thames Cruise", "Thames River Cruise & Boat Tour", "London River Cruise"],
     icons: {
       icon: [
         { url: "/favicon.svg", type: "image/svg+xml" },
@@ -95,26 +95,26 @@ export function generateMetadata(): Metadata {
     },
     robots,
     openGraph: {
-      title: "Versailles Palace Tickets | Skip-the-Line Entry",
+      title: "Thames River Cruise Tickets | Sightseeing & Evening Cruises",
       description:
-        "Explore the opulent Palace of Versailles with official skip-the-line tickets. Fast-track entry, guided tours & free 24h cancellation.",
+        "Explore London's iconic river with official Thames cruise tickets. Guaranteed departures, guided tours & free 24h cancellation.",
       type: "website",
       url: SITE_URL,
-      siteName: "Versailles Palace Tickets",
+      siteName: "Thames River Cruises",
       images: [
         {
           url: DEFAULT_OG_IMAGE,
           width: 2400,
           height: 1350,
-          alt: "Illustration of the Palace of Versailles' golden facade and gardens, France",
+          alt: "Illustration of a Thames river cruise boat passing Tower Bridge, London",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: "Versailles Palace Tickets | Skip-the-Line Entry",
+      title: "Thames River Cruise Tickets | Sightseeing & Evening Cruises",
       description:
-        "Explore the opulent Palace of Versailles with official skip-the-line tickets. Fast-track entry, guided tours & free 24h cancellation.",
+        "Explore London's iconic river with official Thames cruise tickets. Guaranteed departures, guided tours & free 24h cancellation.",
       images: [DEFAULT_OG_IMAGE],
     },
   };
@@ -154,7 +154,7 @@ export default async function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
       </head>
-      <body className="font-body bg-[#FBF3E4] text-[#2B221D] antialiased selection:bg-navy-700 selection:text-marble-50">
+      <body className="font-body bg-[#F4F8FC] text-[#1C2B3A] antialiased selection:bg-navy-700 selection:text-marble-50">
         {themeStyle && <style dangerouslySetInnerHTML={{ __html: themeStyle }} />}
         {/* Google tag (gtag.js) — loaded with next/script's afterInteractive
             strategy so it doesn't block first paint or hydration. */}

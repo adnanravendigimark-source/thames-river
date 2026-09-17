@@ -54,18 +54,18 @@ export default function BlogSidebar({
   return (
     <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
       {/* Search Bar */}
-      <form onSubmit={handleSearch} className="flex rounded-xl border border-[#F3E5C8] bg-white overflow-hidden shadow-sm focus-within:border-[#6B3113]">
+      <form onSubmit={handleSearch} className="flex rounded-xl border border-[#E7F0F9] bg-white overflow-hidden shadow-sm focus-within:border-[#0B2545]">
         <input
           type="text"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search guides..."
-          className="w-full bg-transparent px-3.5 py-2.5 text-xs text-[#2B221D] placeholder-[#2B221D]/60 focus:outline-none"
+          className="w-full bg-transparent px-3.5 py-2.5 text-xs text-[#1C2B3A] placeholder-[#1C2B3A]/60 focus:outline-none"
         />
         <button
           type="submit"
           aria-label="Search"
-          className="flex items-center justify-center bg-[#6B3113] px-3.5 text-white transition hover:bg-[#4E240D]"
+          className="flex items-center justify-center bg-[#0B2545] px-3.5 text-white transition hover:bg-[#081B34]"
         >
           <SearchIcon className="h-4 w-4" />
         </button>
@@ -76,8 +76,8 @@ export default function BlogSidebar({
 
       {/* Popular Articles */}
       {popular.length > 0 && (
-        <div className="rounded-2xl border border-[#F3E5C8] bg-white p-5 shadow-sm">
-          <p className="font-serif text-xs font-bold uppercase tracking-wider text-[#6B3113]">
+        <div className="rounded-2xl border border-[#E7F0F9] bg-white p-5 shadow-sm">
+          <p className="font-serif text-xs font-bold uppercase tracking-wider text-[#0B2545]">
             {relatedHeading}
           </p>
           <div className="mt-4 space-y-3.5">
@@ -87,7 +87,7 @@ export default function BlogSidebar({
                 href={`/blog/${post.slug}`}
                 className="group flex items-center gap-3"
               >
-                <div className="relative h-13 w-16 shrink-0 aspect-[4/3] overflow-hidden rounded-xl bg-[#6B3113]">
+                <div className="relative h-13 w-16 shrink-0 aspect-[4/3] overflow-hidden rounded-xl bg-[#0B2545]">
                   <SafeImage
                     src={post.image}
                     alt={post.imageAlt || post.title}
@@ -98,11 +98,11 @@ export default function BlogSidebar({
                   />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <p className="line-clamp-2 text-xs font-bold leading-snug text-[#6B3113] transition-colors group-hover:text-[#C98A22]">
+                  <p className="line-clamp-2 text-xs font-bold leading-snug text-[#0B2545] transition-colors group-hover:text-[#1E96E0]">
                     {post.title}
                   </p>
-                  <p className="mt-1 flex items-center gap-1 text-[11px] text-[#2B221D]/70 font-medium">
-                    <CalendarIcon className="h-3 w-3 text-[#C98A22]" />
+                  <p className="mt-1 flex items-center gap-1 text-[11px] text-[#1C2B3A]/70 font-medium">
+                    <CalendarIcon className="h-3 w-3 text-[#1E96E0]" />
                     {formatDate(post.date)}
                   </p>
                 </div>
@@ -113,65 +113,65 @@ export default function BlogSidebar({
       )}
 
       {/* Compare Tickets Promo Card */}
-      <div className="relative overflow-hidden rounded-2xl bg-[#6B3113] p-6 text-center text-white shadow-md border border-[#4E240D]">
+      <div className="relative overflow-hidden rounded-2xl bg-[#0B2545] p-6 text-center text-white shadow-md border border-[#081B34]">
         {recommendedBadge && (
-          <span className="mb-2 inline-flex items-center gap-1 rounded-full bg-[#C98A22]/15 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#C98A22]">
+          <span className="mb-2 inline-flex items-center gap-1 rounded-full bg-[#1E96E0]/15 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#1E96E0]">
             {recommendedBadge}
           </span>
         )}
-        <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-[#C98A22] border border-white/15 shadow-sm">
+        <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-[#1E96E0] border border-white/15 shadow-sm">
           <TicketIcon className="h-5 w-5" />
         </div>
         <p className="mt-3.5 font-serif text-base font-bold text-white">
-          Compare Versailles Palace Tickets &amp; Tours
+          Compare Thames River Cruise Tickets &amp; Tours
         </p>
-        <p className="mt-1.5 text-xs leading-relaxed text-[#F1E1C4]">
+        <p className="mt-1.5 text-xs leading-relaxed text-[#E1EBF5]">
           Find the best pass options, timed entry slots and prices in one place.
         </p>
         <a
           href="/#tours"
-          className="mt-4 inline-flex items-center gap-1.5 rounded-lg bg-[#C98A22] px-5 py-2.5 text-xs font-bold text-white shadow-sm transition hover:bg-[#A66E17] hover:scale-[1.02]"
+          className="mt-4 inline-flex items-center gap-1.5 rounded-lg bg-[#1E96E0] px-5 py-2.5 text-xs font-bold text-white shadow-sm transition hover:bg-[#1678B4] hover:scale-[1.02]"
         >
           {compareLinkText}
         </a>
       </div>
 
       {/* Newsletter Card */}
-      <div className="rounded-2xl border border-[#F3E5C8] bg-white p-5 shadow-sm">
-        <p className="font-serif text-xs font-bold uppercase tracking-wider text-[#6B3113]">
+      <div className="rounded-2xl border border-[#E7F0F9] bg-white p-5 shadow-sm">
+        <p className="font-serif text-xs font-bold uppercase tracking-wider text-[#0B2545]">
           NEWSLETTER
         </p>
-        <p className="mt-2 text-xs text-[#2B221D]/80 leading-relaxed">
+        <p className="mt-2 text-xs text-[#1C2B3A]/80 leading-relaxed">
           Get travel tips, guides and exclusive deals straight to your inbox.
         </p>
         {subscribed ? (
-          <p className="mt-3 text-xs font-semibold text-[#C98A22]">✓ Thank you for subscribing!</p>
+          <p className="mt-3 text-xs font-semibold text-[#1E96E0]">✓ Thank you for subscribing!</p>
         ) : (
           <form onSubmit={handleSubscribe} className="mt-3 space-y-2">
-            <div className="flex rounded-lg border border-[#F3E5C8] bg-white overflow-hidden focus-within:border-[#6B3113]">
+            <div className="flex rounded-lg border border-[#E7F0F9] bg-white overflow-hidden focus-within:border-[#0B2545]">
               <input
                 type="email"
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email..."
-                className="w-full bg-transparent px-3 py-2 text-xs text-[#2B221D] placeholder-[#2B221D]/60 focus:outline-none"
+                className="w-full bg-transparent px-3 py-2 text-xs text-[#1C2B3A] placeholder-[#1C2B3A]/60 focus:outline-none"
               />
               <button
                 type="submit"
                 aria-label="Subscribe"
-                className="flex items-center justify-center bg-[#6B3113] px-3 text-white transition hover:bg-[#4E240D]"
+                className="flex items-center justify-center bg-[#0B2545] px-3 text-white transition hover:bg-[#081B34]"
               >
                 →
               </button>
             </div>
-            <label className="flex items-start gap-1.5 text-[11px] text-[#2B221D]/80 cursor-pointer">
+            <label className="flex items-start gap-1.5 text-[11px] text-[#1C2B3A]/80 cursor-pointer">
               <input
                 type="checkbox"
                 required
                 checked={agreed}
                 onChange={(e) => setAgreed(e.target.checked)}
-                className="mt-0.5 rounded border-[#F3E5C8] text-[#6B3113] focus:ring-[#6B3113]"
+                className="mt-0.5 rounded border-[#E7F0F9] text-[#0B2545] focus:ring-[#0B2545]"
               />
               <span>I agree to receive emails and updates.</span>
             </label>

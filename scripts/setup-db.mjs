@@ -3,7 +3,7 @@
 // What it does:
 //   1. Creates every table the app needs, if they don't already exist.
 //   2. If a table is empty, seeds it from the matching file in /data (this
-//      project's own Versailles Palace Tickets starter content) so the site
+//      project's own Thames River Cruises starter content) so the site
 //      has real tours/posts/FAQs/homepage copy from the first run.
 //
 // How to run it:
@@ -458,7 +458,7 @@ async function seedPosts() {
         recommended_tour_id, recommended_tour_after_block, content, sort_order
       ) VALUES (
         ${p.slug}, ${p.title}, ${p.metaTitle || p.title}, ${p.metaDescription || p.excerpt || ""},
-        ${p.category || "Versailles Palace Guides"}, ${p.excerpt || ""}, ${p.quickAnswer || ""},
+        ${p.category || "Thames River Cruise Guides"}, ${p.excerpt || ""}, ${p.quickAnswer || ""},
         ${p.readTime || "5 min read"}, ${date}, ${p.image || p.coverImage || ""},
         ${p.imageAlt || p.coverImageAlt || ""},
         ${p.recommendedTourId || ""}, ${p.recommendedTourAfterBlock ?? null},
@@ -559,18 +559,20 @@ async function seedPrivacyPolicy() {
 
 async function seedSiteSettings() {
   const rows = await sql`SELECT blog_meta_title FROM site_settings WHERE id = 1`;
-  const blogTitle = "Versailles Palace Blog | Tickets, Tours, Prices & Tips (2026)";
+  const blogTitle = "Thames River Cruise Blog | Tickets, Tours, Prices & Tips (2026)";
   const blogDescription =
-    "Comprehensive travel and visitor guides for Versailles Palace tickets — skip-the-line access, guided tour options, booking strategies, and pricing.";
+    "Comprehensive travel and visitor guides for Thames River cruise tickets — sightseeing cruises, evening cruises, booking strategies, and pricing.";
 
   const existing = rows[0];
   // Heal a mismatched-brand row (e.g. left over from copying this project
-  // from its pena-palace/Colosseum-family template) rather than ever
-  // touching a row with different, real admin-set copy.
+  // from its pena-palace/Colosseum/Versailles-Palace-family template) rather
+  // than ever touching a row with different, real admin-set copy.
   const looksLikeWrongBrand =
     existing &&
     typeof existing.blog_meta_title === "string" &&
-    (existing.blog_meta_title.includes("Colosseum") || existing.blog_meta_title.includes("Pena Palace"));
+    (existing.blog_meta_title.includes("Colosseum") ||
+      existing.blog_meta_title.includes("Pena Palace") ||
+      existing.blog_meta_title.includes("Versailles"));
 
   if (existing && !looksLikeWrongBrand) {
     console.log("site_settings: already configured — skipping seed.");
@@ -579,7 +581,7 @@ async function seedSiteSettings() {
 
   if (existing) {
     await sql`UPDATE site_settings SET blog_meta_title = ${blogTitle}, blog_meta_description = ${blogDescription} WHERE id = 1`;
-    console.log("site_settings: healed mismatched blog SEO copy with Versailles Palace copy.");
+    console.log("site_settings: healed mismatched blog SEO copy with Thames River Cruises copy.");
     return;
   }
 
@@ -597,38 +599,41 @@ async function seedAboutPage() {
   // rich-text page, same design as amsterdam/colosseum/arno).
   const a = {
     heroEyebrow: "About Us",
-    heroHeading: "Your Trusted Guide to Versailles Palace Tickets & Paris Day Trips",
+    heroHeading: "Your Trusted Guide to Thames River Cruise Tickets & London Day Trips",
     heroSubheading:
-      "We help travelers navigate Versailles Palace ticket options, secure guaranteed timed-entry reservations, avoid sold-out slots, and experience Louis XIV's Hall of Mirrors with licensed local guides.",
-    heroImage: "/images/versailles-hero.jpg",
-    heroImageAlt: "The golden gates and gilded facade of the Palace of Versailles at golden hour",
-    content: `<h2>Why We Created Versailles Palace Tickets</h2>
-<p>Visiting the Palace of Versailles is a bucket-list dream for millions of travelers, but the ticket booking process can be confusing. Between limited timed-entry slots, multiple ticket tiers (Palace vs Estate of Trianon), and long queues at the box office in peak season, finding the right ticket shouldn't be difficult.</p>
-<p>Versailles Palace Tickets is an independent travel portal dedicated to providing clear, transparent comparisons of official fast-track tickets, guaranteed timed-entry access, and licensed guide-led tours in partnership with verified French providers.</p>
-<h2>How We Curate Versailles Tours & Tickets</h2>
-<p>Every ticket and guided experience featured on our site meets rigorous quality, reliability, and security standards.</p>
+      "We help travelers navigate Thames River cruise options, secure guaranteed departure times, avoid sold-out sailings, and see Tower Bridge, the Houses of Parliament, and St Paul's Cathedral from the water with licensed local operators.",
+    heroImage: "/images/thames-hero.jpg",
+    heroImageAlt: "A Thames river cruise boat passing Tower Bridge at golden hour, London",
+    content: `<h2>Why We Created Thames River Cruises</h2>
+<p>A cruise along the Thames is one of the best ways to see London, but the booking process can be confusing. Between multiple departure piers, operators, and ticket tiers — sightseeing, evening, and afternoon tea cruises — finding the right ticket shouldn't be difficult.</p>
+<p>Thames River Cruises is an independent travel portal dedicated to providing clear, transparent comparisons of official river cruise tickets, guaranteed departure times, and guided sightseeing tours in partnership with verified London-based operators.</p>
+<h2>How We Curate Thames Cruises & Tickets</h2>
+<p>Every cruise and guided experience featured on our site meets rigorous quality, reliability, and safety standards.</p>
 <ul>
-<li><strong>Guaranteed Timed Palace Entry</strong> — Every pre-booked ticket comes with an official timed reservation to explore the Hall of Mirrors and State Apartments without sold-out risk.</li>
-<li><strong>Licensed Local Guides</strong> — Our featured guided tours are led by certified French guides with exceptional traveler ratings.</li>
-<li><strong>100% Free 24h Cancellation</strong> — Transparent pricing with flexible 100% free cancellation up to 24 hours before your scheduled entry time.</li>
-<li><strong>Complete Palace & Estate Access</strong> — Tickets covering the main Palace interior, the Gardens of Versailles, and the Estate of Trianon.</li>
+<li><strong>Guaranteed Departure Times</strong> — Every pre-booked ticket comes with a confirmed sailing time from Westminster, Tower, or Greenwich pier.</li>
+<li><strong>Licensed River Operators</strong> — Our featured cruises are run by licensed Thames operators with exceptional traveler ratings.</li>
+<li><strong>100% Free 24h Cancellation</strong> — Transparent pricing with flexible 100% free cancellation up to 24 hours before your scheduled departure.</li>
+<li><strong>Full River Access</strong> — Tickets covering sightseeing cruises, evening cruises, afternoon tea cruises, and Greenwich round-trips.</li>
 </ul>
 <h2>Affiliate Transparency</h2>
-<p>When you book Versailles Palace tickets or tours through links on our site, we may receive an affiliate commission at no extra cost to you. This enables us to maintain up-to-date, independent travel guides and pricing data for global visitors.</p>
-<p>Have questions about visiting Versailles? Get in touch with our team on our <a href="/contact">contact page</a>.</p>`,
-    metaTitle: "About Us | Versailles Palace Tickets & Paris Visitor Guide",
+<p>When you book Thames River cruise tickets or tours through links on our site, we may receive an affiliate commission at no extra cost to you. This enables us to maintain up-to-date, independent travel guides and pricing data for global visitors.</p>
+<p>Have questions about cruising the Thames? Get in touch with our team on our <a href="/contact">contact page</a>.</p>`,
+    metaTitle: "About Us | Thames River Cruises & London Visitor Guide",
     metaDescription:
-      "Learn about Versailles Palace Tickets: our mission, curation standards, and independent guide to the best Versailles passes and Paris day trips.",
+      "Learn about Thames River Cruises: our mission, curation standards, and independent guide to the best Thames cruise tickets and London day trips.",
   };
   const existing = rows[0];
   const hasRealContent = existing && typeof existing.content === "string" && existing.content.trim().length > 0;
   // Heal a mismatched-brand row (e.g. left over from copying this project
-  // from its pena-palace/Colosseum-family template) rather than ever
-  // touching a row with real, different admin-authored content.
+  // from its pena-palace/Colosseum/Versailles-Palace-family template) rather
+  // than ever touching a row with real, different admin-authored content.
   const looksLikeWrongBrand =
     existing &&
     typeof existing.hero_heading === "string" &&
-    (existing.hero_heading.includes("Colosseum") || existing.hero_heading.includes("Pena Palace") || existing.hero_heading.includes("Sintra"));
+    (existing.hero_heading.includes("Colosseum") ||
+      existing.hero_heading.includes("Pena Palace") ||
+      existing.hero_heading.includes("Sintra") ||
+      existing.hero_heading.includes("Versailles"));
 
   if (existing && hasRealContent && !looksLikeWrongBrand) {
     console.log("about_page: already configured — skipping seed.");
@@ -648,7 +653,7 @@ async function seedAboutPage() {
         meta_description = ${a.metaDescription}
       WHERE id = 1
     `;
-    console.log("about_page: healed mismatched/empty content with Versailles Palace About page copy.");
+    console.log("about_page: healed mismatched/empty content with Thames River Cruises About page copy.");
     return;
   }
 
@@ -672,32 +677,36 @@ async function seedContactPage() {
   // Colosseum-family template) rather than ever touching a row with
   // different, real admin content.
   const reasons = [
-    { icon: "HeadsetIcon", title: "Ticket Selection Advice", body: "Need help choosing between the Palace ticket, Estate of Trianon ticket, or a licensed guide-led tour? Ask our Versailles specialists." },
-    { icon: "BriefcaseIcon", title: "Partnerships & Operators", body: "Licensed French tour operators, tourism authorities, and travel publishers — reach out regarding listings and collaborations." },
-    { icon: "MailIcon", title: "General Inquiries", body: "Feedback, visitor tips, accessibility questions, or editorial suggestions for our Versailles Palace guides." },
+    { icon: "HeadsetIcon", title: "Cruise Selection Advice", body: "Need help choosing between a sightseeing cruise, an evening dinner cruise, or a Greenwich round-trip? Ask our Thames river specialists." },
+    { icon: "BriefcaseIcon", title: "Partnerships & Operators", body: "Licensed London river cruise operators, tourism boards, and travel publishers — reach out regarding listings and collaborations." },
+    { icon: "MailIcon", title: "General Inquiries", body: "Feedback, visitor tips, accessibility questions, or editorial suggestions for our Thames River Cruise guides." },
   ];
   const c = {
     heroEyebrow: "Contact Us",
-    heroHeading: "Get in Touch with Our Paris Travel Team",
+    heroHeading: "Get in Touch with Our London Travel Team",
     heroSubheading:
-      "Questions about booking Versailles Palace tickets, timed-entry slots, guided tour options, or partnership inquiries? Reach out to our team directly.",
+      "Questions about booking Thames River cruise tickets, departure times, guided tour options, or partnership inquiries? Reach out to our team directly.",
     email: "livetravelpartner@gmail.com",
     emailNote: "We typically respond within 1–2 business days.",
     reasonsHeading: "How We Can Help",
     footerNote:
-      "Already booked? Please refer to your confirmation voucher to contact your tour provider directly for real-time meeting point directions or schedule changes.",
-    ctaHeading: "Ready to reserve your Versailles Palace tickets?",
-    ctaButtonLabel: "Compare Versailles Palace Tickets & Tours",
-    metaTitle: "Contact Us | Versailles Palace Tickets",
+      "Already booked? Please refer to your confirmation voucher to contact your cruise operator directly for real-time departure pier directions or schedule changes.",
+    ctaHeading: "Ready to reserve your Thames River cruise tickets?",
+    ctaButtonLabel: "Compare Thames River Cruise Tickets & Tours",
+    metaTitle: "Contact Us | Thames River Cruises",
     metaDescription:
-      "Questions about Versailles Palace tickets, timed-entry passes, or visiting Paris? Contact the Versailles Palace Tickets team.",
+      "Questions about Thames River cruise tickets, departure times, or visiting London? Contact the Thames River Cruises team.",
   };
 
   const existing = rows[0];
   const looksLikeWrongBrand =
     existing &&
     typeof existing.hero_heading === "string" &&
-    (existing.hero_heading.includes("Rome") || existing.hero_heading.includes("Sintra") || existing.hero_heading.includes("Pena Palace"));
+    (existing.hero_heading.includes("Rome") ||
+      existing.hero_heading.includes("Sintra") ||
+      existing.hero_heading.includes("Pena Palace") ||
+      existing.hero_heading.includes("Versailles") ||
+      existing.hero_heading.includes("Paris"));
   // The contact email is standardized to livetravelpartner@gmail.com across
   // every site in this family. Heal it on its own — regardless of the
   // wrong-brand check above — so a row with otherwise-correct copy but a
@@ -732,7 +741,7 @@ async function seedContactPage() {
         meta_description = ${c.metaDescription}
       WHERE id = 1
     `;
-    console.log("contact_page: healed mismatched copy with Versailles Palace Contact page copy.");
+    console.log("contact_page: healed mismatched copy with Thames River Cruises Contact page copy.");
     return;
   }
 
@@ -766,7 +775,7 @@ async function main() {
   await seedSiteSettings();
   await seedAboutPage();
   await seedContactPage();
-  console.log("\nDone. Versailles Palace Tickets database is ready.");
+  console.log("\nDone. Thames River Cruises database is ready.");
 }
 
 main()

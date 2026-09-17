@@ -1,16 +1,16 @@
 {
-  "heroBadge": "VERSAILLES PALACE TICKETS",
-  "heroHeading": "Discover France's Greatest Royal Palace",
-  "heroSubheading": "Book your Palace of Versailles tickets in advance and explore the opulent Hall of Mirrors and King's State Apartments. Breathtaking gardens, royal history, and unforgettable experiences await you.",
-  "heroImage": "/images/versailles-hero.jpg",
-  "heroImageAlt": "The golden gates and gilded facade of the Palace of Versailles under a clear blue sky",
+  "heroBadge": "THAMES RIVER CRUISE TICKETS",
+  "heroHeading": "Discover London's Iconic River",
+  "heroSubheading": "Book your Thames River cruise tickets in advance and see Big Ben, the London Eye, and Tower Bridge from the water. Breathtaking skyline views, live commentary, and unforgettable experiences await you.",
+  "heroImage": "/images/thames-hero.jpg",
+  "heroImageAlt": "A Thames river cruise boat passing Tower Bridge under a clear blue sky, London",
   "showFeaturedTour": true,
-  "featuredTourId": "versailles-palace-skip-the-line-ticket",
-  "featuredBadgeLabel": "Most Popular Ticket",
-  "featuredUrgencyText": "Timed Entry Slots Sell Out 3–5 Days in Advance in Peak Season · Reserve Early",
+  "featuredTourId": "thames-1-hour-sightseeing-cruise",
+  "featuredBadgeLabel": "Most Popular Cruise",
+  "featuredUrgencyText": "Peak-Season Departures Sell Out 2–3 Days in Advance · Reserve Early",
   "featuredReasons": [
-    "Guaranteed timed entry — no waiting in the box-office line at the Cour d'Honneur",
-    "Guaranteed timed entry to the Palace's State Apartments and Hall of Mirrors",
-    "Skip-the-line access to one of the most visited royal residences in the world"
+    "Guaranteed departure time — no waiting at the pier ticket office",
+    "Live commentary past Big Ben, the London Eye, and Tower Bridge",
+    "One of the most popular ways to see London's skyline"
   ]
 }

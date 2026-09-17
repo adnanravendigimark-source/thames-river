@@ -44,8 +44,8 @@ export default async function AboutPage() {
         <section className="relative overflow-hidden bg-white border-b border-gray-100">
           <div className="absolute inset-0 z-0 pointer-events-none">
             <SafeImage
-              src="/images/versailles-hero.jpg"
-              alt={about.heroImageAlt || "The Palace of Versailles, France"}
+              src="/images/thames-hero.jpg"
+              alt={about.heroImageAlt || "The River Thames, London"}
               fill
               priority
               quality={75}
@@ -58,33 +58,33 @@ export default async function AboutPage() {
 
           <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-8 pt-24 sm:pt-28 lg:pt-32 pb-16 sm:pb-20">
             <div className="max-w-2xl">
-              <nav aria-label="Breadcrumb" className="text-xs font-medium text-[#2B221D]/70">
+              <nav aria-label="Breadcrumb" className="text-xs font-medium text-[#1C2B3A]/70">
                 <ol className="flex items-center gap-1.5">
                   <li>
-                    <Link href="/" className="hover:text-[#C98A22] transition-colors">
+                    <Link href="/" className="hover:text-[#1E96E0] transition-colors">
                       Home
                     </Link>
                   </li>
-                  <li className="text-[#2B221D]/40">&gt;</li>
-                  <li className="font-semibold text-[#6B3113]" aria-current="page">
+                  <li className="text-[#1C2B3A]/40">&gt;</li>
+                  <li className="font-semibold text-[#0B2545]" aria-current="page">
                     About Us
                   </li>
                 </ol>
               </nav>
 
-              <span className="mt-4 inline-block text-xs font-bold uppercase tracking-widest text-[#C98A22]">
+              <span className="mt-4 inline-block text-xs font-bold uppercase tracking-widest text-[#1E96E0]">
                 {about.heroEyebrow}
               </span>
 
-              <h1 className="mt-2 font-serif text-3xl font-bold tracking-tight text-[#6B3113] sm:text-4xl lg:text-5xl">
+              <h1 className="mt-2 font-serif text-3xl font-bold tracking-tight text-[#0B2545] sm:text-4xl lg:text-5xl">
                 {about.heroHeading}
               </h1>
 
-              {/* Palace Gold Accent Line */}
-              <div className="mt-3.5 mb-4 h-[2.5px] w-12 rounded-full bg-[#C98A22]" />
+              {/* Sky Blue Accent Line */}
+              <div className="mt-3.5 mb-4 h-[2.5px] w-12 rounded-full bg-[#1E96E0]" />
 
               <div
-                className="rich-content mt-3 text-xs leading-relaxed text-[#2B221D]/85 sm:text-sm"
+                className="rich-content mt-3 text-xs leading-relaxed text-[#1C2B3A]/85 sm:text-sm"
                 dangerouslySetInnerHTML={{ __html: about.heroSubheading }}
               />
             </div>
@@ -94,7 +94,7 @@ export default async function AboutPage() {
         {/* Page content — admin-editable (About page → Page Content) */}
         <div className="mx-auto max-w-4xl px-4 py-14 sm:px-6 sm:py-20">
           <div
-            className="rich-content text-sm sm:text-[15px] leading-relaxed text-[#2B221D]/85"
+            className="rich-content text-sm sm:text-[15px] leading-relaxed text-[#1C2B3A]/85"
             dangerouslySetInnerHTML={{ __html: about.content }}
           />
         </div>

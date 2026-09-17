@@ -13,43 +13,34 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "linear-gradient(135deg, #6B3113 0%, #200F05 100%)",
+          background: "linear-gradient(135deg, #0B2545 0%, #030B16 100%)",
           borderRadius: "16px",
-          border: "2px solid #C98A22",
+          border: "2px solid #1E96E0",
         }}
       >
         <svg width="42" height="42" viewBox="0 0 48 48" fill="none">
-          {/* Ground line */}
-          <path d="M3 42h42" stroke="#C98A22" strokeWidth="1.8" strokeLinecap="round" />
+          {/* River Thames waterline */}
+          <path d="M2 42h44" stroke="#1E96E0" strokeWidth="1.8" strokeLinecap="round" />
+          {/* Gentle wave ripples */}
+          <path d="M6 45q3-2 6 0t6 0t6 0t6 0t6 0t6 0" stroke="#1E96E0" strokeWidth="1.2" strokeLinecap="round" opacity="0.6" />
 
-          {/* Left wing */}
-          <path d="M6 42V29h11v13" stroke="#C98A22" strokeWidth="1.8" strokeLinejoin="round" />
-          <rect x="8.5" y="33" width="2.5" height="4" fill="#C98A22" />
-          <rect x="13" y="33" width="2.5" height="4" fill="#C98A22" />
+          {/* Tower Bridge — left tower */}
+          <path d="M12 42V9l5-5 5 5v33" fill="#1E96E0" fillOpacity="0.18" stroke="#1E96E0" strokeWidth="1.6" strokeLinejoin="round" />
+          {/* Tower Bridge — right tower */}
+          <path d="M26 42V9l5-5 5 5v33" fill="#1E96E0" fillOpacity="0.18" stroke="#1E96E0" strokeWidth="1.6" strokeLinejoin="round" />
 
-          {/* Right wing */}
-          <path d="M31 42V29h11v13" stroke="#C98A22" strokeWidth="1.8" strokeLinejoin="round" />
-          <rect x="32.5" y="33" width="2.5" height="4" fill="#C98A22" />
-          <rect x="37" y="33" width="2.5" height="4" fill="#C98A22" />
+          {/* High-level walkway */}
+          <rect x="17" y="14" width="14" height="3" fill="#1E96E0" fillOpacity="0.35" stroke="#1E96E0" strokeWidth="1.2" />
 
-          {/* Central corps de logis */}
-          <path d="M15 42V18h18v24" stroke="#C98A22" strokeWidth="1.8" strokeLinejoin="round" />
-          {/* Pediment */}
-          <path d="M15 18l9-8 9 8" fill="#C98A22" fillOpacity="0.3" stroke="#C98A22" strokeWidth="1.8" strokeLinejoin="round" />
+          {/* Bascule bridge deck (road level) */}
+          <rect x="17" y="31" width="14" height="3" fill="#1E96E0" stroke="#1E96E0" strokeWidth="1.2" />
 
-          {/* Sun King emblem above pediment */}
-          <circle cx="24" cy="7" r="2" fill="#C98A22" />
-          <path
-            d="M24 1.5v2M24 10.5v2M18.5 7h2M27.5 7h2M20 3l1.4 1.4M26.6 8.6L28 10M28 3l-1.4 1.4M21.4 8.6L20 10"
-            stroke="#C98A22"
-            strokeWidth="1.2"
-            strokeLinecap="round"
-          />
+          {/* Suspension cable accents */}
+          <path d="M14 14L17 31M34 14L31 31" stroke="#1E96E0" strokeWidth="1" strokeLinecap="round" />
 
-          {/* Central facade arched windows */}
-          <path d="M18.5 24a1.6 1.6 0 0 1 3.2 0v6h-3.2v-6z" fill="#C98A22" />
-          <path d="M22.4 24a1.6 1.6 0 0 1 3.2 0v6h-3.2v-6z" fill="#C98A22" />
-          <path d="M26.3 24a1.6 1.6 0 0 1 3.2 0v6h-3.2v-6z" fill="#C98A22" />
+          {/* Tower pinnacles */}
+          <circle cx="17" cy="4" r="1.4" fill="#1E96E0" />
+          <circle cx="31" cy="4" r="1.4" fill="#1E96E0" />
         </svg>
       </div>
     ),

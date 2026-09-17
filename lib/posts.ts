@@ -44,11 +44,11 @@ export interface Post {
   ogImage: string;
 }
 
-const DEFAULT_CTA_HEADING = "Ready to explore the Palace of Versailles?";
-const DEFAULT_CTA_BODY = "Compare official Palace tickets, Estate of Trianon tickets, and guided tours on our homepage.";
-const DEFAULT_CTA_BUTTON_TEXT = "Compare Versailles Palace Tickets & Tours";
+const DEFAULT_CTA_HEADING = "Ready to cruise the River Thames?";
+const DEFAULT_CTA_BODY = "Compare official sightseeing cruises, evening cruises, and guided tours on our homepage.";
+const DEFAULT_CTA_BUTTON_TEXT = "Compare Thames River Cruise Tickets & Tours";
 const DEFAULT_CTA_BUTTON_HREF = "/#prices";
-const DEFAULT_AUTHOR = "Versailles Palace Editorial Team / France Travel Writers";
+const DEFAULT_AUTHOR = "Thames River Cruises Editorial Team / London Travel Writers";
 
 function escapeHtml(text: string): string {
   return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -112,7 +112,7 @@ function seedToPost(seed: any): Post {
     ctaBody: DEFAULT_CTA_BODY,
     ctaButtonText: DEFAULT_CTA_BUTTON_TEXT,
     ctaButtonHref: DEFAULT_CTA_BUTTON_HREF,
-    focusKeyword: seed.focusKeyword || "Versailles Palace Tickets",
+    focusKeyword: seed.focusKeyword || "Thames River Cruise & Boat Tour",
     noIndex: !!seed.noIndex,
     noFollow: !!seed.noFollow,
     canonicalUrl: seed.canonicalUrl || "",
@@ -129,7 +129,7 @@ function rowToPost(row: any): Post {
     title: row.title,
     metaTitle: row.meta_title,
     metaDescription: row.meta_description,
-    category: row.category || "Versailles Palace Guides",
+    category: row.category || "Thames River Cruise Guides",
     excerpt: row.excerpt,
     quickAnswer: row.quick_answer || "",
     readTime: row.read_time || "5 min read",
@@ -138,7 +138,7 @@ function rowToPost(row: any): Post {
     image: row.image || row.cover_image || "",
     imageAlt: row.image_alt || row.cover_image_alt || "",
     author: row.author || DEFAULT_AUTHOR,
-    recommendedTourId: row.recommended_tour_id || "versailles-palace-skip-the-line-ticket",
+    recommendedTourId: row.recommended_tour_id || "thames-1-hour-sightseeing-cruise",
     recommendedTourAfterBlock:
       row.recommended_tour_after_block === null ? undefined : Number(row.recommended_tour_after_block),
     content: parseContent(row.content),
@@ -146,7 +146,7 @@ function rowToPost(row: any): Post {
     ctaBody: row.cta_body || DEFAULT_CTA_BODY,
     ctaButtonText: row.cta_button_text || DEFAULT_CTA_BUTTON_TEXT,
     ctaButtonHref: row.cta_button_href || DEFAULT_CTA_BUTTON_HREF,
-    focusKeyword: row.focus_keyword || "Versailles Palace Tickets",
+    focusKeyword: row.focus_keyword || "Thames River Cruise & Boat Tour",
     noIndex: !!row.no_index,
     noFollow: !!row.no_follow,
     canonicalUrl: row.canonical_url || "",

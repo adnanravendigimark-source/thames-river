@@ -4,7 +4,7 @@ import { getHomepageContent } from "@/lib/homepage";
 export default async function Hero() {
   const content = await getHomepageContent();
 
-  const heroImageSrc = content.heroImage || "/images/versailles-hero.jpg";
+  const heroImageSrc = content.heroImage || "/images/thames-hero.jpg";
 
   return (
     <section className="relative w-full min-h-screen min-h-[100dvh] flex flex-col justify-center bg-white overflow-hidden">
@@ -24,7 +24,7 @@ export default async function Hero() {
         ) : (
           <SafeImage
             src={heroImageSrc}
-            alt={content.heroImageAlt || "The Palace of Versailles' golden gates and gardens, France"}
+            alt={content.heroImageAlt || "A Thames river cruise boat passing Tower Bridge, London"}
             fill
             priority
             quality={75}
@@ -39,29 +39,29 @@ export default async function Hero() {
       {/* Hero Content Layer (positioned comfortably below header) */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-8 pt-16 sm:pt-24 lg:pt-32 pb-16 sm:pb-24 lg:pb-32 flex-1 flex flex-col justify-center">
         <div className="max-w-xl lg:max-w-2xl mt-4 sm:mt-6 lg:mt-8">
-          {/* Top Eyebrow in Palace Gold */}
-          <p className="text-xs sm:text-[13px] font-bold tracking-[0.18em] uppercase text-[#C98A22]">
-            {content.heroBadge || "VERSAILLES PALACE TICKETS"}
+          {/* Top Eyebrow in Sky Blue */}
+          <p className="text-xs sm:text-[13px] font-bold tracking-[0.18em] uppercase text-[#1E96E0]">
+            {content.heroBadge || "THAMES RIVER CRUISE TICKETS"}
           </p>
 
           {/* Main Headline */}
-          <h1 className="mt-3 font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-bold leading-[1.12] tracking-tight text-[#6B3113]">
-            {content.heroHeading || "Discover France’s Most Iconic Palace"}
+          <h1 className="mt-3 font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-bold leading-[1.12] tracking-tight text-[#0B2545]">
+            {content.heroHeading || "Discover London's Iconic River"}
           </h1>
 
-          {/* Palace Gold Accent Line */}
-          <div className="mt-3.5 mb-5 h-[2.5px] w-12 rounded-full bg-[#C98A22]" />
+          {/* Sky Blue Accent Line */}
+          <div className="mt-3.5 mb-5 h-[2.5px] w-12 rounded-full bg-[#1E96E0]" />
 
           {/* Subtitle */}
-          <p className="text-sm sm:text-base text-[#2B221D] leading-relaxed max-w-lg font-normal">
-            Book your Versailles Palace tickets in advance and explore one of France&apos;s greatest royal residences. Opulent state apartments, legendary gardens, and unforgettable experiences await you.
+          <p className="text-sm sm:text-base text-[#1C2B3A] leading-relaxed max-w-lg font-normal">
+            Book your Thames River cruise tickets in advance and see London from the water. Iconic skyline views, live commentary, and unforgettable experiences await you.
           </p>
 
           {/* Action Buttons */}
           <div className="mt-7 flex flex-wrap items-center gap-3.5 sm:gap-4">
             <a
               href={content.heroCtaPrimaryHref || "#tours"}
-              className="group inline-flex items-center justify-center gap-2 rounded-lg bg-[#6B3113] px-6 py-3.5 text-xs sm:text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#4E240D] hover:shadow-md hover:-translate-y-0.5"
+              className="group inline-flex items-center justify-center gap-2 rounded-lg bg-[#0B2545] px-6 py-3.5 text-xs sm:text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#081B34] hover:shadow-md hover:-translate-y-0.5"
             >
               <span>{content.heroCtaPrimaryText || "Book Tickets Now"}</span>
               <span className="transition-transform group-hover:translate-x-1">→</span>
@@ -69,7 +69,7 @@ export default async function Hero() {
 
             <a
               href={content.heroCtaSecondaryHref || "#tours"}
-              className="group inline-flex items-center justify-center gap-2 rounded-lg border border-[#2B221D]/30 bg-white/40 md:bg-transparent px-6 py-3.5 text-xs sm:text-sm font-semibold text-[#2B221D] transition-all hover:bg-white/80 hover:border-[#2B221D]/50 hover:-translate-y-0.5"
+              className="group inline-flex items-center justify-center gap-2 rounded-lg border border-[#1C2B3A]/30 bg-white/40 md:bg-transparent px-6 py-3.5 text-xs sm:text-sm font-semibold text-[#1C2B3A] transition-all hover:bg-white/80 hover:border-[#1C2B3A]/50 hover:-translate-y-0.5"
             >
               <span>{content.heroCtaSecondaryText || "Explore Tours"}</span>
               <span className="transition-transform group-hover:translate-x-1">→</span>

@@ -21,13 +21,13 @@ export default async function NotFound() {
             href={s.primaryButtonHref || "/#tours"}
             className="rounded-xl bg-navy-700 px-6 py-3 text-sm font-bold text-marble-50 shadow-md ring-1 ring-navy-600 transition hover:bg-navy-800 hover:scale-[1.02]"
           >
-            {s.primaryButtonText || "Compare Versailles Palace Tickets & Passes →"}
+            {s.primaryButtonText || "Compare Thames River Cruise Tickets & Passes →"}
           </Link>
           <Link
             href={s.secondaryButtonHref || "/blog"}
             className="rounded-xl border border-tuscan-300 bg-marble-50 px-6 py-3 text-sm font-bold text-navy-800 transition hover:bg-tuscan-100"
           >
-            {s.secondaryButtonText || "Read Versailles Travel Guides"}
+            {s.secondaryButtonText || "Read London Travel Guides"}
           </Link>
         </div>
       </main>

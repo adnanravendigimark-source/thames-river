@@ -30,25 +30,25 @@ export interface ContactPageContent {
 
 const DEFAULT_CONTACT: ContactPageContent = {
   heroEyebrow: "Contact Us",
-  heroHeading: "Get in Touch with Our Paris Travel Team",
+  heroHeading: "Get in Touch with Our London Travel Team",
   heroSubheading:
-    "Questions about booking Versailles Palace tickets, timed-entry slots, guided tour options, or partnership inquiries? Reach out to our team directly.",
+    "Questions about booking Thames River cruise tickets, departure times, guided tour options, or partnership inquiries? Reach out to our team directly.",
   email: "livetravelpartner@gmail.com",
   emailLabel: "Email Us Directly",
   emailNote: "We typically respond within 1–2 business days.",
   reasonsHeading: "How We Can Help",
   reasons: [
-    { icon: "HeadsetIcon", title: "Ticket Selection Advice", body: "Need help choosing between the Palace ticket, Estate of Trianon ticket, or a licensed guide-led tour? Ask our Versailles specialists." },
-    { icon: "BriefcaseIcon", title: "Partnerships & Operators", body: "Licensed French tour operators, tourism authorities, and travel publishers — reach out regarding listings and collaborations." },
-    { icon: "MailIcon", title: "General Inquiries", body: "Feedback, visitor tips, accessibility questions, or editorial suggestions for our Versailles Palace guides." },
+    { icon: "HeadsetIcon", title: "Cruise Selection Advice", body: "Need help choosing between a sightseeing cruise, an evening dinner cruise, or a Greenwich round-trip? Ask our Thames river specialists." },
+    { icon: "BriefcaseIcon", title: "Partnerships & Operators", body: "Licensed London river cruise operators, tourism boards, and travel publishers — reach out regarding listings and collaborations." },
+    { icon: "MailIcon", title: "General Inquiries", body: "Feedback, visitor tips, accessibility questions, or editorial suggestions for our Thames River Cruise guides." },
   ],
   footerNote:
-    "Already booked? Please refer to your confirmation voucher to contact your tour provider directly for real-time meeting point directions or schedule changes.",
-  ctaHeading: "Ready to reserve your Versailles Palace tickets?",
-  ctaButtonLabel: "Compare Versailles Palace Tickets & Tours",
-  metaTitle: "Contact Us | Versailles Palace Tickets",
+    "Already booked? Please refer to your confirmation voucher to contact your cruise operator directly for real-time departure pier directions or schedule changes.",
+  ctaHeading: "Ready to reserve your Thames River cruise tickets?",
+  ctaButtonLabel: "Compare Thames River Cruise Tickets & Tours",
+  metaTitle: "Contact Us | Thames River Cruises",
   metaDescription:
-    "Questions about Versailles Palace tickets, timed-entry passes, or visiting Paris? Contact the Versailles Palace Tickets team.",
+    "Questions about Thames River cruise tickets, departure times, or visiting London? Contact the Thames River Cruises team.",
   canonicalUrl: "",
   noIndex: false,
   noFollow: false,

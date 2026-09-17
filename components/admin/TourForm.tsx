@@ -110,7 +110,7 @@ export default function TourForm({
             value={tour.id}
             onChange={(e) => update("id", e.target.value)}
             className={`${inputClass} ${!isNew ? "bg-stone-100 text-stone-500" : ""}`}
-            placeholder="e.g. versailles-palace-skip-the-line-ticket"
+            placeholder="e.g. thames-1-hour-sightseeing-cruise"
           />
         </div>
         <div>
@@ -257,7 +257,7 @@ export default function TourForm({
             value={tour.hrefPath}
             onChange={(e) => update("hrefPath", e.target.value)}
             className={inputClass}
-            placeholder="paris-l16/tour-name-t12345 — or paste a full https:// URL"
+            placeholder="london-l57/tour-name-t12345 — or paste a full https:// URL"
           />
         </div>
         <div>
@@ -296,15 +296,15 @@ export default function TourForm({
       </div>
 
       <div>
-        <label className={labelClass}>Price table: "Palace Interior Access" column (optional)</label>
+        <label className={labelClass}>Price table: "Onboard Feature" column (optional)</label>
         <input
           value={tour.priceTableFeature || ""}
           onChange={(e) => update("priceTableFeature", e.target.value)}
           className={inputClass}
-          placeholder="e.g. ✅ Full Palace Interior Access"
+          placeholder="e.g. ✅ Live Guide Onboard"
         />
         <p className="mt-1 text-xs text-stone-500">
-          Shown in the homepage price-comparison table's "Palace Interior Access" column for this tour.
+          Shown in the homepage price-comparison table's "Onboard Feature" column for this tour.
           Leave blank to show "Standard Pass".
         </p>
       </div>

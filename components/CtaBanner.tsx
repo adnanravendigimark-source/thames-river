@@ -5,15 +5,15 @@ export default async function CtaBanner() {
   const s = sections.ctaBanner;
 
   return (
-    <section className="py-14 sm:py-16 bg-[#FBF3E4]">
+    <section className="py-14 sm:py-16 bg-[#F4F8FC]">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="relative overflow-hidden rounded-2xl bg-[#6B3113] px-6 py-8 sm:px-10 sm:py-10 shadow-xl shadow-black/15 border border-[#4E240D]">
-          {/* Subtle Palace Gold Architectural Watermarks */}
+        <div className="relative overflow-hidden rounded-2xl bg-[#0B2545] px-6 py-8 sm:px-10 sm:py-10 shadow-xl shadow-black/15 border border-[#081B34]">
+          {/* Subtle Sky Blue Architectural Watermarks */}
           <div className="pointer-events-none absolute -left-10 -bottom-10 h-56 w-56 opacity-10">
             <svg
               viewBox="0 0 100 100"
               fill="none"
-              stroke="#C98A22"
+              stroke="#1E96E0"
               strokeWidth="2"
               className="h-full w-full"
             >
@@ -25,7 +25,7 @@ export default async function CtaBanner() {
             <svg
               viewBox="0 0 100 100"
               fill="none"
-              stroke="#C98A22"
+              stroke="#1E96E0"
               strokeWidth="2"
               className="h-full w-full"
             >
@@ -37,11 +37,11 @@ export default async function CtaBanner() {
             {/* Left Content */}
             <div className="flex items-center gap-4 sm:gap-5">
               {/* Line Art Castle Icon */}
-              <div className="hidden sm:flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/10 text-[#C98A22] border border-white/15">
+              <div className="hidden sm:flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/10 text-[#1E96E0] border border-white/15">
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#C98A22"
+                  stroke="#1E96E0"
                   strokeWidth="1.75"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -55,7 +55,7 @@ export default async function CtaBanner() {
                 <h2 className="font-serif text-xl sm:text-2xl font-bold text-white tracking-tight">
                   {s.heading}
                 </h2>
-                <p className="mt-1 text-xs text-[#F1E1C4]">
+                <p className="mt-1 text-xs text-[#E1EBF5]">
                   {s.subtext}
                 </p>
               </div>
@@ -64,7 +64,7 @@ export default async function CtaBanner() {
             {/* Right Action Button */}
             <a
               href={s.buttonHref}
-              className="group inline-flex shrink-0 items-center justify-center gap-2 rounded-lg bg-[#C98A22] px-7 py-3 text-xs font-bold text-white shadow-md transition-all hover:bg-[#A66E17] hover:shadow-lg hover:-translate-y-0.5"
+              className="group inline-flex shrink-0 items-center justify-center gap-2 rounded-lg bg-[#1E96E0] px-7 py-3 text-xs font-bold text-white shadow-md transition-all hover:bg-[#1678B4] hover:shadow-lg hover:-translate-y-0.5"
             >
               <span>{s.buttonText}</span>
               <span className="transition-transform group-hover:translate-x-1">→</span>

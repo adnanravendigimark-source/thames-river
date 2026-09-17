@@ -2,14 +2,14 @@ import { sql } from "./db";
 import toursSeed from "@/data/tours.json";
 import faqsSeed from "@/data/faqs.json";
 
-export const PARTNER_ID = process.env.GYG_PARTNER_ID || "VERSAILLESPALACE";
+export const PARTNER_ID = process.env.GYG_PARTNER_ID || "THAMESRIVERCRUISES";
 
 function gygLink(path: string, extra = "") {
   const trimmed = (path || "").trim();
   if (/^https?:\/\//i.test(trimmed)) {
     return `${trimmed}${extra || ""}`;
   }
-  return `https://www.getyourguide.com/${trimmed}?partner_id=${PARTNER_ID}&utm_medium=online_publisher&cmp=versailles-palace-tickets${extra}`;
+  return `https://www.getyourguide.com/${trimmed}?partner_id=${PARTNER_ID}&utm_medium=online_publisher&cmp=thames-river-cruise-tours${extra}`;
 }
 
 export type TourType = "guided" | "self-guided" | "combo";

@@ -18,17 +18,17 @@ export default async function TourGrid() {
     : toursRaw;
 
   return (
-    <section id="tours" className="py-16 sm:py-20 bg-[#FEFCF9]">
+    <section id="tours" className="py-16 sm:py-20 bg-[#FFFFFF]">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Section Header — admin-editable (Tour Grid section) */}
         <div className="text-center max-w-2xl mx-auto">
-          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#C98A22]">
+          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#1E96E0]">
             {s.eyebrow}
           </p>
-          <h2 className="mt-2.5 font-serif text-3xl sm:text-[2.25rem] font-bold text-[#6B3113] tracking-tight">
+          <h2 className="mt-2.5 font-serif text-3xl sm:text-[2.25rem] font-bold text-[#0B2545] tracking-tight">
             {s.heading}
           </h2>
-          <p className="mt-2.5 text-xs sm:text-sm text-[#2B221D]/80">
+          <p className="mt-2.5 text-xs sm:text-sm text-[#1C2B3A]/80">
             {s.subheading}
           </p>
         </div>
@@ -42,12 +42,12 @@ export default async function TourGrid() {
               key={tour.id}
               className={`group flex flex-col overflow-hidden rounded-2xl bg-white transition-all duration-300 hover:-translate-y-1 ${
                 isRecommended || tour.featured
-                  ? "border-2 border-[#C98A22] shadow-lg shadow-[#C98A22]/10 relative ring-1 ring-[#C98A22]/20"
-                  : "border border-gray-200 shadow-sm hover:shadow-lg hover:border-[#C98A22]/40"
+                  ? "border-2 border-[#1E96E0] shadow-lg shadow-[#1E96E0]/10 relative ring-1 ring-[#1E96E0]/20"
+                  : "border border-gray-200 shadow-sm hover:shadow-lg hover:border-[#1E96E0]/40"
               }`}
             >
               {/* Card Image & Overlay Badges */}
-              <div className="relative aspect-[16/9.5] w-full overflow-hidden bg-[#6B3113]">
+              <div className="relative aspect-[16/9.5] w-full overflow-hidden bg-[#0B2545]">
                 <SafeImage
                   src={tour.image}
                   alt={tour.imageAlt}
@@ -60,7 +60,7 @@ export default async function TourGrid() {
                 {/* Ribbon Badge — Recommended Tour badge takes priority over the
                     tour's own ribbon text when this is the admin-picked tour */}
                 {(isRecommended || tour.ribbon) && (
-                  <div className="absolute top-3 left-3 z-10 inline-flex items-center gap-1 rounded-md bg-[#C98A22] px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-md">
+                  <div className="absolute top-3 left-3 z-10 inline-flex items-center gap-1 rounded-md bg-[#1E96E0] px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-white shadow-md">
                     <span>👑</span>
                     <span>{isRecommended ? (homepage.featuredBadgeLabel || "Recommended") : tour.ribbon}</span>
                   </div>
@@ -68,10 +68,10 @@ export default async function TourGrid() {
 
                 {/* Rating Badge Floating Bottom Left (placeholder until real reviews exist) */}
                 {tour.rating !== undefined && (
-                  <div className="absolute bottom-2.5 left-2.5 z-10 inline-flex items-center gap-1 rounded-md bg-white/95 backdrop-blur-md px-2.5 py-1 text-[11px] font-bold text-[#6B3113] shadow-sm">
+                  <div className="absolute bottom-2.5 left-2.5 z-10 inline-flex items-center gap-1 rounded-md bg-white/95 backdrop-blur-md px-2.5 py-1 text-[11px] font-bold text-[#0B2545] shadow-sm">
                     <span className="text-[#00B67A]">★</span>
                     <span>{tour.rating}</span>
-                    <span className="text-[#2B221D]/70 font-normal">({tour.reviews})</span>
+                    <span className="text-[#1C2B3A]/70 font-normal">({tour.reviews})</span>
                   </div>
                 )}
               </div>
@@ -79,14 +79,14 @@ export default async function TourGrid() {
               {/* Card Body */}
               <div className="flex flex-1 flex-col p-5">
                 {/* Title */}
-                <h3 className="font-serif text-[15px] sm:text-base font-bold text-[#6B3113] leading-snug group-hover:text-[#C98A22] transition-colors line-clamp-2 min-h-[44px]">
+                <h3 className="font-serif text-[15px] sm:text-base font-bold text-[#0B2545] leading-snug group-hover:text-[#1E96E0] transition-colors line-clamp-2 min-h-[44px]">
                   <a href={tour.href} target="_blank" rel="noopener nofollow sponsored">
                     {tour.title}
                   </a>
                 </h3>
 
                 {/* Snippet Description */}
-                <p className="mt-1.5 text-xs text-[#2B221D]/80 leading-relaxed line-clamp-2">
+                <p className="mt-1.5 text-xs text-[#1C2B3A]/80 leading-relaxed line-clamp-2">
                   {stripHtml(tour.description)}
                 </p>
 
@@ -99,9 +99,9 @@ export default async function TourGrid() {
                     {tour.includes.slice(0, 3).map((feat, idx) => (
                       <div
                         key={idx}
-                        className="flex items-start gap-2 rounded-md bg-gray-50 px-2.5 py-1.5 text-[11.5px] text-[#2B221D] border border-gray-100"
+                        className="flex items-start gap-2 rounded-md bg-gray-50 px-2.5 py-1.5 text-[11.5px] text-[#1C2B3A] border border-gray-100"
                       >
-                        <span className="mt-0.5 text-[#6B3113] font-bold shrink-0">✓</span>
+                        <span className="mt-0.5 text-[#0B2545] font-bold shrink-0">✓</span>
                         <span className="leading-tight font-medium line-clamp-1">{feat}</span>
                       </div>
                     ))}
@@ -110,7 +110,7 @@ export default async function TourGrid() {
 
                 {/* Duration — admin → Tours & Tickets → "Duration" field */}
                 {tour.duration && (
-                  <div className="mt-2 flex items-center gap-1.5 text-[11px] text-[#2B221D]/70">
+                  <div className="mt-2 flex items-center gap-1.5 text-[11px] text-[#1C2B3A]/70">
                     <span>⏱</span>
                     <span className="font-medium">{tour.duration}</span>
                   </div>
@@ -120,14 +120,14 @@ export default async function TourGrid() {
                 <div className="mt-auto pt-4">
                   <div className="flex items-center justify-between pt-3.5 border-t border-gray-100">
                     <div>
-                      <span className="block text-[9.5px] font-bold uppercase tracking-wider text-[#2B221D]/70">
+                      <span className="block text-[9.5px] font-bold uppercase tracking-wider text-[#1C2B3A]/70">
                         FROM
                       </span>
                       <div className="flex items-baseline gap-1">
-                        <span className="font-serif text-xl sm:text-2xl font-bold text-[#6B3113]">
+                        <span className="font-serif text-xl sm:text-2xl font-bold text-[#0B2545]">
                           €{tour.price}
                         </span>
-                        <span className="text-[11px] text-[#2B221D]/70">/person</span>
+                        <span className="text-[11px] text-[#1C2B3A]/70">/person</span>
                       </div>
                     </div>
 
@@ -135,13 +135,13 @@ export default async function TourGrid() {
                       href={tour.href}
                       target="_blank"
                       rel="noopener nofollow sponsored"
-                      className="inline-flex items-center justify-center rounded-lg bg-[#6B3113] px-5 py-2.5 text-xs font-bold text-white shadow-sm transition-all hover:bg-[#4E240D] hover:shadow-md"
+                      className="inline-flex items-center justify-center rounded-lg bg-[#0B2545] px-5 py-2.5 text-xs font-bold text-white shadow-sm transition-all hover:bg-[#081B34] hover:shadow-md"
                     >
                       {bookNowText}
                     </a>
                   </div>
                   {isRecommended && homepage.featuredUrgencyText && (
-                    <p className="mt-2.5 flex items-center gap-1 text-[11px] font-semibold text-[#C98A22]">
+                    <p className="mt-2.5 flex items-center gap-1 text-[11px] font-semibold text-[#1E96E0]">
                       <LockIcon className="h-3 w-3" /> {homepage.featuredUrgencyText}
                     </p>
                   )}

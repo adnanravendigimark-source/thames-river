@@ -14,12 +14,12 @@ export default function QuickAnswer({
   return (
     <div
       id="quick-answer"
-      className="mt-2 flex scroll-mt-24 gap-3 rounded-2xl border border-[#C98A22]/25 bg-[#C98A22]/5 p-5"
+      className="mt-2 flex scroll-mt-24 gap-3 rounded-2xl border border-[#1E96E0]/25 bg-[#1E96E0]/5 p-5"
     >
       <span className="mt-0.5 text-lg">💡</span>
       <div>
-        <p className="text-xs font-semibold uppercase tracking-wider text-[#A66E17]">{label}</p>
-        <p className="mt-1 text-sm leading-relaxed text-[#2B221D]/85">{children}</p>
+        <p className="text-xs font-semibold uppercase tracking-wider text-[#1678B4]">{label}</p>
+        <p className="mt-1 text-sm leading-relaxed text-[#1C2B3A]/85">{children}</p>
       </div>
     </div>
   );

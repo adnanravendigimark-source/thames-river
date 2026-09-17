@@ -15,14 +15,14 @@ export default async function FAQSection() {
   };
 
   return (
-    <section id="faq" className="py-16 sm:py-20 bg-[#FEFCF9] border-t border-gray-200">
+    <section id="faq" className="py-16 sm:py-20 bg-[#FFFFFF] border-t border-gray-200">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
         <div className="text-center max-w-xl mx-auto">
-          <p className="text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase text-[#C98A22]">
+          <p className="text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase text-[#1E96E0]">
             {sections.faq.eyebrow || "FREQUENTLY ASKED QUESTIONS"}
           </p>
-          <h2 className="mt-2.5 font-serif text-2xl sm:text-3xl lg:text-[2.15rem] font-bold text-[#6B3113] tracking-tight">
-            {sections.faq.heading || "Versailles Palace Tickets FAQs"}
+          <h2 className="mt-2.5 font-serif text-2xl sm:text-3xl lg:text-[2.15rem] font-bold text-[#0B2545] tracking-tight">
+            {sections.faq.heading || "Thames River Cruise Tickets FAQs"}
           </h2>
         </div>
 
