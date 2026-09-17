@@ -1,0 +1,16 @@
+{
+  "heroBadge": "PENA PALACE TICKETS",
+  "heroHeading": "Discover Sintra's Most Iconic Palace",
+  "heroSubheading": "Book your Pena Palace tickets in advance and explore one of Portugal's 7 Wonders. Breathtaking views, romantic architecture, and unforgettable experiences await you.",
+  "heroImage": "/images/pena-palace-hero.jpg",
+  "heroImageAlt": "Pena Palace's iconic yellow dome and red romanticist towers overlooking the Sintra mountain landscape",
+  "showFeaturedTour": true,
+  "featuredTourId": "pena-palace-park-skip-the-line-entry",
+  "featuredBadgeLabel": "Most Popular Ticket",
+  "featuredUrgencyText": "Timed Entry Slots Sell Out 3–5 Days in Advance in Peak Season · Reserve Early",
+  "featuredReasons": [
+    "Guaranteed timed entry — no waiting in the box-office line at the park gate",
+    "Guaranteed timed entry to Pena Palace's Manueline and Neo-Gothic interior",
+    "Includes full access to Pena Park's 200+ hectares of romantic gardens"
+  ]
+}

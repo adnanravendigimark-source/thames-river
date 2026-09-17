@@ -1,0 +1,62 @@
+[
+  {
+    "id": "faq-1",
+    "question": "What is the difference between the Park + Palace ticket and the Park Only ticket?",
+    "answer": "The <strong>Park + Palace ticket</strong> includes full access to Pena Palace's colorful interior state rooms and terraces, plus the surrounding Pena Park. The <em>Park Only</em> ticket covers just the 200+ hectares of gardens, forest trails, and viewpoints — you can see the Palace's exterior towers from below, but you cannot enter the building. If you only have time for one, the interior is worth the extra cost for most first-time visitors.",
+    "category": "Tickets & Passes"
+  },
+  {
+    "id": "faq-2",
+    "question": "Why do I need to book a timed entry slot in advance?",
+    "answer": "Pena Palace's interior rooms are narrow and historic, so a limited number of visitors are allowed in every few minutes to protect the building and keep the experience comfortable. During peak season (July–August) and around Portuguese public holidays, <strong>timed entry slots can sell out 3–5 days in advance</strong>. Booking online beforehand guarantees your entry and avoids arriving to find your preferred time gone.",
+    "category": "Booking & Reservations"
+  },
+  {
+    "id": "faq-3",
+    "question": "What are Pena Palace's opening hours?",
+    "answer": "Pena Palace is open <strong>365 days a year</strong>, with the single exception of 25 December. Summer hours (April–October) generally run from <strong>9:30am to 7:00pm</strong>, with last entry to the park at 6:30pm and last palace entry at 6:00pm. Hours can shift slightly by season, so always check your ticket confirmation for the exact time window.",
+    "category": "Visiting & Location"
+  },
+  {
+    "id": "faq-4",
+    "question": "Is there a dress code for visiting Pena Palace?",
+    "answer": "No strict dress code applies — Pena Palace is a former royal residence, not an active place of worship, so there are no shoulder or knee-covering requirements. That said, comfortable walking shoes are strongly recommended: the park involves uphill cobblestone paths, and the palace has narrow stone staircases between floors.",
+    "category": "Visitor Rules"
+  },
+  {
+    "id": "faq-5",
+    "question": "What is the difference between Pena Palace and the Moors' Castle?",
+    "answer": "Both sit on hilltops above Sintra, but the experiences are distinct:<ul><li><strong>Pena Palace:</strong> A 19th-century Romanticist royal palace with brightly colored towers, ornate interior rooms, and manicured gardens — built as a summer retreat for King Ferdinand II.</li><li><strong>Moors' Castle:</strong> A 9th-century Moorish hilltop fortress with stone ramparts you can walk along for sweeping views — no interior rooms, just the walls and towers themselves.</li></ul>Many visitors combine both in a single day, along with Quinta da Regaleira, since they're a short drive or shuttle ride apart.",
+    "category": "Comparisons"
+  },
+  {
+    "id": "faq-6",
+    "question": "How do I get from Sintra town centre to Pena Palace?",
+    "answer": "Pena Palace sits at the top of the Sintra hills, about a 20–25 minute uphill walk from Sintra town centre — steep and not recommended in summer heat. Most visitors take the <strong>Tuk-tuk, local Bus 434</strong> (the 'Circuito da Pena' hop-on-hop-off route), or a taxi/rideshare from the train station or town centre, all of which drop you near the park's upper gate.",
+    "category": "Visiting & Location"
+  },
+  {
+    "id": "faq-7",
+    "question": "Can I visit Pena Palace for free?",
+    "answer": "No — unlike some historic town squares, there is no free entry to Pena Park or Pena Palace. The official park-only ticket starts around €12 for adults, and the combined park + palace ticket around €20. Booking online in advance also lets you skip the on-site ticket-office queue, which can be significant in peak season.",
+    "category": "Tickets & Passes"
+  },
+  {
+    "id": "faq-8",
+    "question": "How much time should I plan for a Pena Palace visit?",
+    "answer": "Most visitors spend <strong>2–3 hours</strong> total: about 45–60 minutes touring the palace interior, plus time walking the park grounds, High Cross viewpoint, and Valley of the Lakes. If you also want to see the Chalet of the Countess d'Edla or explore more of the park's trails, budget closer to 4 hours.",
+    "category": "Visitor Information"
+  },
+  {
+    "id": "faq-9",
+    "question": "Are large backpacks, tripods, or strollers allowed inside the Palace?",
+    "answer": "Large backpacks, tripods, and bulky luggage are discouraged inside the palace's narrow interior corridors and may need to be checked or left outside. Strollers can be used throughout most of Pena Park's main paths, but the palace interior has staircases that are not stroller-accessible — a baby carrier is a better option for the interior visit.",
+    "category": "Visitor Rules"
+  },
+  {
+    "id": "faq-10",
+    "question": "What is the cancellation policy for tickets?",
+    "answer": "All tickets and tours booked through our authorized partners feature a <strong>100% full refund guarantee</strong> when cancelled up to 24 hours before your scheduled entry time. This gives you complete peace of mind if your travel plans change.",
+    "category": "Booking & Reservations"
+  }
+]
