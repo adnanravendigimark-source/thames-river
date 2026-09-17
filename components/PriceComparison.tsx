@@ -42,6 +42,11 @@ export default async function PriceComparison() {
               >
                 <td className="px-6 py-4 font-semibold text-[#0B2545]">{tour.title}</td>
                 <td className="px-6 py-4 font-bold text-[#1E96E0]">
+                  {tour.originalPrice && tour.originalPrice > tour.price && (
+                    <span className="mr-1.5 font-normal text-xs text-[#1C2B3A]/40 line-through">
+                      £{tour.originalPrice}
+                    </span>
+                  )}
                   £{tour.price} <span className="font-normal text-xs text-[#1C2B3A]/60">/ person</span>
                 </td>
                 <td className="px-6 py-4 text-[#1C2B3A]/80">{tour.priceTableColumn1 || tour.duration}</td>
