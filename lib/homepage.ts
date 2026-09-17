@@ -201,7 +201,6 @@ export interface HomepageContent {
   heroImage: string;
   heroImageAlt: string;
   heroVideo: string;
-  heroGallery: GalleryImage[];
   heroFeatures: HeroFeature[];
   heroCtaPrimaryText: string;
   heroCtaPrimaryHref: string;
@@ -286,39 +285,6 @@ export const DEFAULT_HERO_FEATURES: HeroFeature[] = [
   { title: "Guaranteed Departure", subtitle: "Reserve your exact sailing time" },
   { title: "River Access", subtitle: "See London from the Thames" },
   { title: "24/7 Support", subtitle: "We're here to help" },
-];
-
-export const DEFAULT_GALLERY: GalleryImage[] = [
-  {
-    src: "/images/thames-hero.jpg",
-    alt: "A Thames river cruise boat passing Tower Bridge under a clear blue sky, London",
-    label: "River Thames & Tower Bridge",
-  },
-  {
-    src: "/images/thames-tour-1.jpg",
-    alt: "A Thames sightseeing boat passing the Houses of Parliament and Big Ben, London",
-    label: "Houses of Parliament",
-  },
-  {
-    src: "/images/thames-tour-2.jpg",
-    alt: "A guide pointing out landmarks to passengers aboard a Thames river cruise boat",
-    label: "Guided Cruise",
-  },
-  {
-    src: "/images/thames-tour-3.jpg",
-    alt: "A river cruise boat approaching Greenwich Pier on the Thames, London",
-    label: "Greenwich",
-  },
-  {
-    src: "/images/thames-tour-5.jpg",
-    alt: "A traditional afternoon tea spread served aboard a Thames river cruise boat",
-    label: "Afternoon Tea Cruise",
-  },
-  {
-    src: "/images/thames-tour-4.jpg",
-    alt: "Tower Bridge illuminated at night, viewed from a Thames evening cruise boat",
-    label: "Evening Cruise",
-  },
 ];
 
 export const DEFAULT_SECTIONS: HomepageSections = {
@@ -509,7 +475,6 @@ const DEFAULT_HOMEPAGE_CONTENT: HomepageContent = {
   heroImage: "/images/thames-hero.jpg",
   heroImageAlt: "Thames river cruise boat passing Tower Bridge at sunset, London",
   heroVideo: "",
-  heroGallery: DEFAULT_GALLERY,
   heroFeatures: DEFAULT_HERO_FEATURES,
   heroCtaPrimaryText: "Explore Cruises",
   heroCtaPrimaryHref: "#tours",
@@ -576,10 +541,6 @@ function rowToHomepage(row: any): HomepageContent {
     heroImage: row.hero_image || DEFAULT_HOMEPAGE_CONTENT.heroImage,
     heroImageAlt: row.hero_image_alt || DEFAULT_HOMEPAGE_CONTENT.heroImageAlt,
     heroVideo: row.hero_video || "",
-    heroGallery: (() => {
-      const g = parseReasons(row.hero_gallery);
-      return g.length ? (g as unknown as GalleryImage[]) : DEFAULT_GALLERY;
-    })(),
     heroFeatures: (() => {
       const f = parseReasons(row.hero_features);
       return f.length ? (f as unknown as HeroFeature[]) : DEFAULT_HERO_FEATURES;
@@ -652,7 +613,6 @@ export async function saveHomepageCopy(data: {
   heroImage: string;
   heroImageAlt: string;
   heroVideo: string;
-  heroGallery: GalleryImage[];
   heroFeatures: HeroFeature[];
   heroCtaPrimaryText: string;
   heroCtaPrimaryHref: string;
@@ -669,13 +629,13 @@ export async function saveHomepageCopy(data: {
   await sql`
     INSERT INTO homepage (
       id, hero_badge, hero_heading, hero_subheading, hero_image, hero_image_alt,
-      hero_video, hero_gallery, hero_features, hero_cta_primary_text, hero_cta_primary_href,
+      hero_video, hero_features, hero_cta_primary_text, hero_cta_primary_href,
       hero_cta_secondary_text, hero_cta_secondary_href,
       meta_title, meta_description, focus_keyword,
       canonical_url, og_title, og_description, og_image
     ) VALUES (
       1, ${data.heroBadge}, ${data.heroHeading}, ${data.heroSubheading}, ${data.heroImage},
-      ${data.heroImageAlt}, ${data.heroVideo || ""}, ${JSON.stringify(data.heroGallery || [])}::jsonb,
+      ${data.heroImageAlt}, ${data.heroVideo || ""},
       ${JSON.stringify(data.heroFeatures || [])}::jsonb,
       ${data.heroCtaPrimaryText || ""}, ${data.heroCtaPrimaryHref || ""},
       ${data.heroCtaSecondaryText || ""}, ${data.heroCtaSecondaryHref || ""},
@@ -689,7 +649,6 @@ export async function saveHomepageCopy(data: {
       hero_image = EXCLUDED.hero_image,
       hero_image_alt = EXCLUDED.hero_image_alt,
       hero_video = EXCLUDED.hero_video,
-      hero_gallery = EXCLUDED.hero_gallery,
       hero_features = EXCLUDED.hero_features,
       hero_cta_primary_text = EXCLUDED.hero_cta_primary_text,
       hero_cta_primary_href = EXCLUDED.hero_cta_primary_href,
