@@ -45,6 +45,7 @@ const CONTENT_SECTIONS = [
   { id: "sec-hero", label: "Hero" },
   { id: "sec-tourgrid", label: "Tour Grid" },
   { id: "sec-why", label: "What You See" },
+  { id: "sec-why-cta", label: "\"What You See\" Closing Banner" },
   { id: "sec-tower", label: "River Landmarks Spotlight" },
   { id: "sec-practical", label: "Practical Info" },
   { id: "sec-price", label: "Price Comparison" },
@@ -430,7 +431,7 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
           <SectionCard
             id="sec-why"
             title="“What You See” section"
-            description="The eyebrow, heading, intro paragraph and photo, plus the visit timeline, discovery list, optional 3rd list, and closing CTA banner shown below it on the live homepage."
+            description="The eyebrow, heading, intro paragraph and photo, plus the visit timeline, discovery list, and optional 3rd list. The closing CTA banner shown below it has its own section further down."
             open={!!openSections["sec-why"]}
             onToggle={() => toggleSection("sec-why")}
           >
@@ -501,7 +502,15 @@ export default function HomepageForm({ initial, tours }: { initial: HomepageCont
               />
             </Field>
 
-            <p className="text-xs font-semibold uppercase tracking-wide text-stone-400 pt-2">Closing CTA banner</p>
+          </SectionCard>
+
+          <SectionCard
+            id="sec-why-cta"
+            title="“What You See” closing banner"
+            description="The dark call-to-action banner shown right after the “What You See” section (timeline/discovery lists), roughly midway down the homepage. This is a different banner from the “Bottom CTA Banner” further down."
+            open={!!openSections["sec-why-cta"]}
+            onToggle={() => toggleSection("sec-why-cta")}
+          >
             <Field label="CTA text">
               <textarea rows={2} value={content.sections.why.ctaText} onChange={(e) => updateWhy({ ctaText: e.target.value })} className={inputClass} />
             </Field>
