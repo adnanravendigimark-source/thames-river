@@ -9,7 +9,6 @@ import { getBlogSeoSettings } from "@/lib/settings";
 import { getHomepageContent } from "@/lib/homepage";
 import { resolveRobots, resolveCanonical, resolveOg, buildBreadcrumbJsonLd } from "@/lib/seo";
 
-export const dynamic = "force-dynamic";
 
 export async function generateMetadata(): Promise<Metadata> {
   const settings = await getBlogSeoSettings();

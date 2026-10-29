@@ -1,3 +1,4 @@
+import { withSiteRevalidate } from "@/lib/revalidateSite";
 import { NextResponse } from "next/server";
 import { revalidatePath } from "next/cache";
 import { getHomepageContent, saveRecommendedTour, type HomepageContent } from "@/lib/homepage";
@@ -20,7 +21,7 @@ export async function GET() {
 // form), but only these fields are persisted here — everything else
 // (hero copy, sections, header/footer, theme) is owned by
 // PUT /api/admin/homepage and must not be touched by this route.
-export async function PUT(req: Request) {
+async function PUTHandler(req: Request) {
   try {
     const body = (await req.json().catch(() => null)) as HomepageContent | null;
     if (!body) {
@@ -45,3 +46,5 @@ export async function PUT(req: Request) {
     return NextResponse.json({ error: dbErrorMessage(err) }, { status: 500 });
   }
 }
+
+export const PUT = withSiteRevalidate(PUTHandler);
